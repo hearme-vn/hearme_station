@@ -1,0 +1,93 @@
+page-collection {
+/*
+    ion-content {
+        background-image: url("../assets/imgs/splash.png") !important;
+		z-index: 1;
+    }
+	*/
+    .scroll-content{
+        padding: 0px!important;
+        margin: 0px!important;
+        overflow: hidden !important;
+    }
+    .collection-content{
+        background: no-repeat center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        overflow: hidden !important;
+        padding: 0px !important;
+    }
+    .video-container {
+        height: 100%;
+        width: 100%;
+        padding: 0px;
+        margin: 0px; 
+        overflow: hidden;
+		z-index: 1000;
+    }
+    .video-container iframe, .video-container object, .video-container embed {
+        position: absolute;
+		left: 0px;
+		top: 0px;
+        width: 100%;
+        height: 100%;
+		z-index: 9999;
+    }
+    .collection-backgroud{
+        background: no-repeat center; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+    // ion-footer {
+    //     background: white;
+    //     z-index: 1000;
+    //     // opacity: 0.6;
+    // }
+    .video-cover {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index: 10000;
+        background: none;
+    }
+    .swiper-pagination {
+        bottom: 80px !important;
+    }
+    
+    // .slide-default {
+    //     color: #1DCE6C;
+    //     height: 100%;
+    //     border: 2px #1DCE6C solid;
+    //     text-transform: uppercase;
+    //     display: table;
+    //     height: 8vh;
+	// 	font-size: 2.5vw !important;
+    //     text-align: -webkit-center;
+    // }
+    
+    // .slide-default span {
+    //     display: table-cell;
+    //     vertical-align: middle;
+    // }
+
+    // .slide-active {
+    //     color: #fff;
+    //     background-color: #1dcf6b;
+    // }
+    
+    // .text-left {
+    //     color: #535353;
+    // }
+	
+	// .footer {
+	// 	position: fixed;
+	// 	bottom: 0px;
+	// 	width: 100%;
+	// 	z-index: 1000;
+    //     background-color: white;
+	// }	
+}

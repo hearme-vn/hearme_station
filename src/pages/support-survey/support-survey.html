@@ -1,0 +1,43 @@
+<!--
+  Created by: VXThuc@yahoo.com
+  Organization: LabsOfThings.com
+  Project: hearme.vn   
+  Date: 05 Aug 2020
+-->
+<ion-header class="main_background_color"
+    [service]=appInit [survey]=survey [controller]=this> 
+</ion-header>
+
+<!-- FOR ALL THEMES -->
+<ion-content class="{{appInit.screen_orientation}} container">
+    <ng-container *ngTemplateOutlet="tpl_survey_content"></ng-container>
+</ion-content>
+
+<ion-footer
+    [survey]=survey
+    [controller]=this>
+</ion-footer>
+
+<ng-template #tpl_survey_content>
+    <multi-selection *ngIf="survey?.data?.type==4"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime">
+    </multi-selection>
+    <single-selection *ngIf="survey?.data?.type==5"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime" (clicked)="sendFeedback()">
+    </single-selection>
+    <stars *ngIf="survey?.data?.type==6"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime">
+    </stars>
+    <text *ngIf="survey?.data?.type==7"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime">
+    </text>
+    <contact *ngIf="survey?.data?.type==9"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime">
+    </contact>
+    <form-based *ngIf="survey?.data?.type==11"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime">
+    </form-based>
+    <uploader *ngIf="survey?.data?.type==12"
+        [appInit]=appInit [survey]=survey [startTime]="survey.startTime">
+    </uploader>
+</ng-template>

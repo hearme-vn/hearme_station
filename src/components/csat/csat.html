@@ -1,0 +1,38 @@
+<!-- template for the CSAT component -->
+
+<!-- FOR SURVEY QUESTION -->
+<ion-row>  
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<!-- RATING LEVELS FOR LARGE SCREEN -->
+<ion-row class="motion-faces hidden-xs">
+    <ion-col class="main_border_color" *ngFor="let level_key of csat_level_keys; let i = index" [ngClass]="{'selected': survey?.feedback?.rating==i+1}">
+        <img tappable (click)="iconClicked(i+1)" *ngIf="survey?.data.col_posts?.length>4" class="rating-face" 
+                src="{{appConf.img_server + survey.data.col_posts[i].fileName}}"/>
+        <img tappable (click)="iconClicked(i+1)" *ngIf="survey?.data.col_posts?.length<5" 
+            class="rating-face" src="assets/icon/{{i+1}}.gif"/>
+
+        <span *ngIf="survey?.data.col_posts && survey?.data.col_posts?.length>4 && survey?.data?.col_posts[i]?.content"
+            [innerHTML]="survey.data.col_posts[i].content"></span>
+        <span *ngIf="!survey?.data.col_posts || survey?.data.col_posts?.length<5 || !survey?.data.col_posts[i]?.content">
+            {{ level_key | translate }}</span>
+    </ion-col>
+</ion-row>
+
+<!-- RATING LEVELS FOR SMALL SCREEN -->
+<ion-row class="motion-faces small hidden-sm hidden-md hidden-lg hidden-xl">
+    <ion-col class="main_border_color" col-4 *ngFor="let level_key of csat_level_keys; let i = index" [ngClass]="{'selected': survey?.feedback?.rating==i+1}">
+        <img tappable (click)="iconClicked(i+1)" *ngIf="survey?.data.col_posts?.length>4" class="rating-face" 
+                src="{{appConf.img_server + survey.data.col_posts[i].fileName}}"/>
+        <img tappable (click)="iconClicked(i+1)" *ngIf="survey?.data.col_posts?.length<5" 
+            class="rating-face" src="assets/icon/{{i+1}}.gif"/>
+
+        <span *ngIf="survey?.data.col_posts && survey?.data.col_posts?.length>4 && survey?.data?.col_posts[i]?.content"
+            [innerHTML]="survey.data.col_posts[i].content"></span>
+        <span *ngIf="!survey?.data.col_posts || survey?.data.col_posts?.length<5 || !survey?.data.col_posts[i]?.content">
+            {{ level_key | translate }}</span>
+    </ion-col>
+</ion-row>

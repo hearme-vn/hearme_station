@@ -1,0 +1,52 @@
+<!-- Template for the 5stars rating Component -->
+
+<!-- FOR QUESTION DISPLAYED IN FORM-BASED SURVEY -->
+<ion-row *ngIf="in_form">
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<!-- FOR TEXT FACTOR-BASED SURVEY -->
+<ng-template [ngIf]="!survey?.data?.col_posts || survey?.data?.col_posts.length<=0">
+    <ion-list>
+        <ion-item class="question-label" *ngFor="let item of factors">
+            <div [innerHTML]="item?.factor?.question"></div>
+            <span item-end>
+                <ion-rating
+                    [numStars]="5"
+                    [readOnly]="false"
+                    [value]="item?.rating"
+                    (clicked)="starClicked($event, item)">
+                </ion-rating>
+            </span>
+        </ion-item>
+    </ion-list>
+</ng-template>
+
+<!-- FOR IMAGE FACTOR-BASED SURVEY -->
+<ng-template [ngIf]="survey?.data.col_posts?.length>0">
+    <ion-row *ngIf="factors.length<=3">
+        <ion-col col-4 col-lg-3 *ngFor="let item of factors; let i = index" class="factor">
+            <ng-container [ngTemplateOutlet]="ratingItem" [ngTemplateOutletContext]="{$implicit: i, $item: item}"></ng-container>
+        </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="factors.length>3">
+        <ion-col col-4 col-md-3 col-lg-2 *ngFor="let item of factors; let i = index" class="factor">
+            <ng-container [ngTemplateOutlet]="ratingItem" [ngTemplateOutletContext]="{$implicit: i, $item: item}"></ng-container>
+        </ion-col>
+    </ion-row>
+</ng-template>
+
+<!-- TEMPLATE FOR IMAGE BASED FACTOR -->
+<ng-template #ratingItem let-i let-item="$item">
+    <div [innerHTML]="item?.factor?.question"></div>
+    <img class="img-survey" src="{{appConf?.img_server + survey?.data?.col_posts[i]?.fileName}}"/>
+    <ion-rating
+        [numStars]="5"
+        [readOnly]="false"
+        [value]="item?.rating"
+        (clicked)="starClicked($event, item)">
+    </ion-rating>
+</ng-template>

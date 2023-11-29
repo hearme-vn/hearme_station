@@ -1,0 +1,51 @@
+<!-- Template for NPS Component -->
+
+<!-- FOR SURVEY QUESTION -->
+<ion-row>  
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<!-- RATING LEVELS FOR LARGE SCREEN -->
+<div  class="hidden-xs">
+    <ion-row class="motion-faces">
+        <ion-col class="main_border_color" *ngFor="let level of rating_levels; let i = index" [ngClass]="{'selected': survey?.feedback?.rating==i}">
+            <div tappable (click)="iconClicked(level)" class="div-nps nps-color-{{level}}" >
+                <div class="ratinglevel-text">{{level}}</div>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-12><div class="nps-gradient"></div></ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6 class="text-left text-very-unlikely">
+            {{ 'RATING_NPS_VERY_UNLIKELY' | translate }}
+        </ion-col>
+        <ion-col col-6 class="text-right text-very-likely">
+            {{ 'RATING_NPS_VERY_LIKELY' | translate }}
+        </ion-col>
+    </ion-row>
+</div>
+
+<!-- RATING LEVELS FOR SMALL SCREEN -->
+<div class="small hidden-sm hidden-md hidden-lg hidden-xl">
+    <ion-row>
+        <ion-col col-12 class="text-left text-very-unlikely">
+            {{ 'RATING_NPS_VERY_UNLIKELY' | translate }}
+        </ion-col>
+    </ion-row>
+    <ion-row class="motion-faces main_border_color">
+        <ion-col col-2 *ngFor="let level of rating_levels; let i = index" [ngClass]="{'selected': survey?.feedback?.rating==i}">
+            <div tappable (click)="iconClicked(level)" class="div-nps nps-color-{{level}}" >
+                <div class="ratinglevel-text">{{level}}</div>
+            </div>
+        </ion-col>
+    </ion-row>
+    <ion-row>  
+        <ion-col col-12 class="text-right text-very-likely">
+            {{ 'RATING_NPS_VERY_LIKELY' | translate }}
+        </ion-col>
+    </ion-row>
+</div>

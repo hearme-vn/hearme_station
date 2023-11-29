@@ -1,0 +1,18 @@
+<!--
+    Created by: VXThuc@yahoo.com
+    Organization: LabsOfThings.com
+    Project: hearme.vn   
+    Date: 12 Nov 2020
+    Purpose: For display images in fullscreen using modal dialog
+-->
+
+<div class="preview" #previewImage *ngIf="image" [ngClass]="appInit.screen_orientation">
+    <div align="right" class="closer">
+        <button ion-button class="all-buttons main_background_color main_border_color" (click)="closeImagePreview()">
+            <ion-icon class="delete" ios="ios-close" md="ios-close-outline" tappable></ion-icon>
+        </button>        
+    </div>
+    <div class="content">
+        <img src="{{image}}">
+    </div>
+</div>

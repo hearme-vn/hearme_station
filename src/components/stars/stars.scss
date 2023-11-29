@@ -1,0 +1,29 @@
+stars {
+    ion-row {
+        justify-content: center;
+    }
+    .factor {
+        display: inline-block;
+        font-size: $font_size_factor_description !important;
+        min-width: 20%;
+    }
+    .factor ion-rating ion-icon {       // Font size for stars
+        font-size: 4vw;
+    }    
+    
+    .question-label {
+        font-size: $font_size_factor_description;
+    }
+    
+    ion-item {
+        background: transparent !important;
+        padding-right: 0px !important;
+    }
+
+    /*Mobile*/
+    @media (max-width: 570px) {
+        .question-label {
+            font-size: $font_size_factor_description_portrait;
+        }    
+    }
+}

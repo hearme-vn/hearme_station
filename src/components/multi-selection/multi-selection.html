@@ -1,0 +1,38 @@
+<!-- MultiSelection Component -->
+
+<!-- FOR QUESTION DISPLAYED IN FORM-BASED SURVEY -->
+<ion-row *ngIf="in_form">
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<!-- FOR TEXT FACTOR-BASED SURVEY  -->
+<ng-template [ngIf]="!survey?.data?.col_posts || survey?.data?.col_posts.length<=0">
+    <ion-list class="{{appInit.screen_orientation}}">
+        <ion-item mode="md" class="question-label" *ngFor="let item of survey?.subs">
+            <ion-label mode="md" [innerHTML]="item?.question"></ion-label>
+            <ion-checkbox mode="md" item-right [(ngModel)]="item.rating" (click)="checkboxClick()"></ion-checkbox> 
+        </ion-item>
+    </ion-list>
+</ng-template>
+
+
+<!-- FOR IMAGE FACTOR-BASED SURVEY -->
+<ng-template [ngIf]="survey?.data.col_posts?.length > 0">
+    <ion-row *ngIf="subs_number<=3">
+        <ion-col col-4 col-lg-3 *ngFor="let item of survey?.subs; let i = index" class="factor ">
+            <img tappable class="main_border_color img-survey" src="{{appConf.img_server + survey?.data?.col_posts[i]?.fileName}}" 
+                (click)="iconClicked(item)" [class.active-factor]="item.rating"/>
+            <div [innerHTML]="item?.question"></div>
+        </ion-col>
+    </ion-row>
+
+    <ion-row *ngIf="subs_number>3">
+        <ion-col col-4 col-md-3 col-lg-2 *ngFor="let item of survey?.subs; let i = index" class="factor ">
+            <img tappable class="main_border_color img-survey" src="{{appConf.img_server + survey?.data?.col_posts[i]?.fileName}}" 
+                (click)="iconClicked(item)" [class.active-factor]="item.rating"/>
+            <div [innerHTML]="item?.question"></div>
+        </ion-col>
+    </ion-row>
+</ng-template>

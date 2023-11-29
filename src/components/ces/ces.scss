@@ -1,0 +1,103 @@
+ces {
+    ion-row {
+        justify-content: center;        
+    }
+
+    // .motion-faces {
+    //     text-transform: uppercase;
+    // }
+    .rating-circle {
+        cursor: pointer;
+        width: 100% !important;
+        padding-top: 100% !important;
+        position: relative !important;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        text-align: center;
+        color: #1a1a1a;
+        font-size: 3.5vw;
+    }
+    .ratinglevel-text {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        height: 30%;
+        right: 0;
+        width: 50%;
+        margin: auto;
+    }
+    // .question {
+    //     font-size: $font_size_index_question !important;
+    // }
+    .col {
+        font-size: $font_size_factor_description;
+        padding: 1vw;
+    }
+    .rating-ces {
+        height: 20px;
+        width: 2px;
+        margin: 10px auto;
+    }
+    .ces-background-1 {
+        background-color: #c23824;
+    }
+    .ces-background-2 {
+        background-color: #f59d00;
+    }
+    .ces-background-3 {
+        background-color: #fbcb43;
+    }
+    .ces-background-4 {
+        background-color: #ffe168;
+    }
+    .ces-background-5 {
+        background-color: #4cd964;
+    }
+    .ces-background-6 {
+        background-color: #1dce6c;
+    }
+    .ces-background-7 {
+        background-color: #1caf5e;
+    }
+
+    .text-very-unlikely{
+        color: #a82917;
+        font-size: $font_size_factor_description;
+    }
+    .text-very-likely{
+        color: #1caf5e;
+        font-size: $font_size_factor_description;
+    }
+	
+    // .small {
+    //     text-transform: uppercase;
+
+    //     .rating-circle {
+    //         font-size: 5vw;
+    //     }
+    // }
+
+	.selected {
+        border-bottom: 5px groove color($colors, primary, #1DCE6C);
+	}
+
+	@media (max-width: 540px) {
+        // .question {
+        //     font-size: $font_size_index_question_portrait !important;
+        // }
+        .col {
+            font-size: $font_size_factor_description_portrait;
+        }    
+        .rating-circle {
+            font-size: 5vw;
+        }
+
+        .text-very-unlikely, .text-very-likely {
+            font-size: $font_size_factor_description_portrait;
+        }
+
+	}
+
+}

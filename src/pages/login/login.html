@@ -1,0 +1,48 @@
+<!--
+  Created by: VXThuc@yahoo.com
+  Organization: LabsOfThings.com
+  Project: hearme.vn
+  Date: 21 Jul 2016
+-->
+
+<ion-content class="no-scroll {{appInit.screen_orientation}}" padding>
+    <ion-row class="logo">
+        <ion-col>
+            <img src="assets/imgs/hearme.png"/>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-1 col-lg-2></ion-col>
+        <ion-col>
+            <form (ngSubmit)="login()" #registerForm="ngForm">
+                <ion-list>
+                    <ion-item class="first-child">
+                        <ion-label floating>{{ 'LOGIN_deviceid' | translate }}</ion-label>
+                        <ion-input type="text" name="device_id" [(ngModel)]="registerCredentials.device_id" required autocomplete="off" autocorrect="off"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label floating>{{ 'LOGIN_secret' | translate }}</ion-label>
+                        <ion-input type="password" name="device_secret" [(ngModel)]="registerCredentials.device_secret" required autocomplete="off" autocorrect="off"></ion-input>
+                    </ion-item>
+                    <ion-item *ngIf="registerCredentials.isSetUrl">
+                        <ion-label floating>{{ 'LOGIN_url' | translate }}</ion-label>
+                        <ion-input type="url" name="url" [(ngModel)]="registerCredentials.url" autocomplete="off" autocorrect="off"></ion-input>
+                    </ion-item>
+                </ion-list>
+                <ion-row>
+                    <ion-col class="signup-col" col-12 col-lg-6>
+                        <button ion-button class="form-btn" full type="submit" [disabled]="!registerForm.form.valid">{{ 'LOGIN_login' | translate }}</button>
+                    </ion-col>
+                    <ion-col class="signup-col" col-12 col-lg-6>
+                        <button ion-button class="form-btn" full type="button" (click)="barcodeScan()">{{ 'LOGIN_qrcode' | translate }}</button>
+                    </ion-col>
+                </ion-row>
+            </form>
+        </ion-col>
+        <ion-col col-1 col-lg-2></ion-col>
+    </ion-row>
+</ion-content>
+
+<ion-footer
+    [controller]=this [pageName]="'LoginPage'">
+</ion-footer>

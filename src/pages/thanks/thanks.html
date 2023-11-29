@@ -1,0 +1,45 @@
+<!--
+  Created by: VXThuc@yahoo.com
+  Organization: LabsOfThings.com
+  Project: hearme.vn
+  Date: 21 Jul 2016
+-->
+<div class="header {{appInit.screen_orientation}}">
+    <ion-navbar hideBackButton="true" class="main_background_color">
+		<div class="title">
+			{{ 'THANKGIVING_thank' | translate }} {{customer?.name}}
+		</div>
+        <ion-buttons end>
+            <button ion-button block (click)="runNextSurvey()" *ngIf="!style_isPopup">
+                <ion-icon name="md-home" class="icon-tablet"></ion-icon>
+            </button>
+            <button ion-button block (click)="closeModal()" *ngIf="style_isPopup">
+                <ion-icon name="md-home" class="icon-tablet"></ion-icon>
+            </button>      
+        </ion-buttons>
+    </ion-navbar>
+</div>
+<ion-content>
+    <div class="wrapper">
+        <ion-row class="row {{appInit.screen_orientation}}"> 
+            <ion-col></ion-col>
+            <ion-col col-9>
+                <img *ngIf="!promotion_code" class="thank-face" src="assets/imgs/thanks.svg" />
+                <div *ngIf="promotion_code" class="point-code">
+                    <ngx-qrcode [qrc-value]="promotion_code"></ngx-qrcode>
+                    <p>
+                        {{ promotion_code }}
+                    </p>
+                    <p>
+                        {{ 'PROMOTION_CODE' | translate }}
+                    </p>
+                </div>
+                <p class="thanks text-center" *ngIf="!proverb"> {{ 'THANKGIVING_explaination' | translate}} </p>
+                <p class="thanks author" *ngIf="!proverb">___{{ 'hearme_team' | translate}}___</p>
+                <p class="thanks" *ngIf="proverb" [innerHTML]="proverb?.content"></p>
+                <p class="thanks author" *ngIf="proverb">___{{ proverb?.author }}___</p>
+            </ion-col>
+            <ion-col></ion-col>
+        </ion-row>
+    </div>
+</ion-content>

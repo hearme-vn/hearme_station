@@ -1,0 +1,112 @@
+{
+    "LOGIN_login": "Вход в систему",
+    "LOGIN_deviceid": "Код устройства",
+    "LOGIN_secret": "Пароль",
+    "LOGIN_url": "URI",
+    "LOGIN_qrcode": "Сканировать QR-коды", 
+    "LOGIN_processing": "Обработка ...", 
+    "LOGIN_error": "Ошибка проверки подлинности", 
+    "LOGIN_close": "Закрыть", 
+        
+    "RATING_unhappy": "Очень недовольно",
+    "RATING_accepted":"Недовольно", 
+    "RATING_good":"Принято",
+    "RATING_excellent":"довольно",
+    "RATING_inloved":"Очень довольно",
+    
+    "COMMENT_comment":"Ваша оценка ",
+    "COMMENT_sendfeedback":"Отправить отзыв",
+    "COMMENT_name": "ФИО",
+    "COMMENT_contact": "Номер телефона",
+
+    "CONTACT_name": "Ваше имя",
+    "CONTACT_phone": "Номер телефона",
+    "CONTACT_email": "Электронная почта",
+    "CONTACT_address": "Адрес",
+    "CONTACT_roomnumber": "Номер комнаты",
+        
+	"MESSAGE_Welcome": "Спасибо за использование наших услуг.  Мы будем очень Вам признательны, если Вы оставите свой отзыв",
+	"MESSAGE_Start_Feedback": "Отвечать на отзыв",
+    
+    "THANKGIVING_thank":"Благодарим вас",
+    "THANKGIVING_explaination":"Спасибо, что оставили отзыв. Ваше мнение для нас очень важно.",
+    "hearme_team":"Группа слушателей",
+    
+    "TAB_FEEDBACK": "Отзыв",
+    "TAB_COLLECTION": "Коллекция",
+    
+    "RATING_CES_extremely_difficult": "Очень сложно",
+    "RATING_CES_very_difficult": "Сложно",
+    "RATING_CES_fairly_difficult": "Немного сложно",
+    "RATING_CES_neither": "Средне",
+    "RATING_CES_fairly_easy": "Немного легко",
+    "RATING_CES_very_easy": "Легко",
+    "RATING_CES_extremely_easy": "Очень легко",
+    
+    "RATING_NPS_VERY_UNLIKELY": "Абсолютно нет",
+    "RATING_NPS_VERY_LIKELY": "Абсолютно да",
+    
+    "RATING_NPS_1": "Уровень 0",
+    "RATING_NPS_2": "Уровень 1",
+    "RATING_NPS_3": "Уровень 2",
+    "RATING_NPS_4": "Уровень 3",
+    "RATING_NPS_5": "Уровень 4",
+    "RATING_NPS_6": "Уровень 5",
+    "RATING_NPS_7": "Уровень 6",
+    "RATING_NPS_8": "Уровень 7",
+    "RATING_NPS_9": "Уровень 8",
+    "RATING_NPS_10": "Уровень 9",
+    "RATING_NPS_11": "Уровень 10",
+    
+    "WELCOME_dear": "Привет",
+    "WELCOME_customer": "Дорогие гости",
+    "WELCOME_invitation_expired": "Спасибо вам за отзывы. К сожалению, срок действия кода опроса истек",
+    "WELCOME_finish": "Конец",
+	
+    "FEEDBACK_BACK": "НАЗАД",
+    "FEEDBACK_NEXT": "Следующий",
+    
+    "PROMOTION_CODE": "Вы получите код вознаграждения. Пожалуйста, сделайте скриншот кода, чтобы выкупить",
+    "PROMOTION_SUGGESTION_FULL": "Ответьте на все вопросы, чтобы получить бонусные баллы",
+    "PROMOTION_SUGGESTION_PART": "Ответьте на вопросы, чтобы получить бонусные баллы",
+    
+    "TOAST_BUTTON_CLOSE": "Закрыть",
+    
+    "message": {
+        "DATA_PROCESSING": "Обработка ...", 
+
+        "INPUT_REQUIRED": "Пожалуйста, введите информацию в обязательные поля",
+        "ANSWER_REQUIRED": "Пожалуйста, отправьте отзыв, прежде чем перейти к следующей странице",
+        "FIELD_INVALID": "Введенная информация не верна",
+        "CAPTCHA_INVALID": "Ошибка: не подтверждено, что вы не робот",
+        
+        "UNKNOWN": "There is unknown error in getting data",
+        "NETWORK_DISCONNECTED": "Network is error. Check Internet connection and try again",
+        "BARCODE_ERROR": "Can not scan QRCode. Check your device or create new code and try again",
+        "BARCODE_INVALID": "This QRCode is invalid. Create new QR code and try again",
+        "DEVICE_INACTIVE": "Your device is inactive. Activate it and synchronize this device",
+        "SURVEY_INACTIVE": "This survey is inactive. Re-configure survey for this device",
+
+        "EXCEED_MAX_SIZE": "Размер загружаемого файла превышает максимально допустимый размер: 300 КБ. Операция отклонена",
+        "FILE_UPLOADING_ERROR": "Ошибка при загрузке файла. Пожалуйста, повторите попытку позже",
+        "HAVENOT_CAPTURE_IMAGE": "Вы не сделали снимок с камеры для сохранения"
+
+    },
+    "httpcode": {
+        "DVT02": "Wrong device information. Operation is rejected",
+        
+        "DVA01": "Wrong device information. Operation is rejected",
+        "DVA02": "Hardware id cannot be null. Operation is rejected",
+        "DVA03": "os information cannot be null. Operation is rejected",
+        
+        "DAS01": "Device id is invalid. Operation is rejected",
+        "DAS02": "This device group does not have active survey. Configure survey for this device"
+    },
+
+    "UPLOADER_FILE": "Файлы",
+    "UPLOADER_IMAGE": "Изображений",
+
+    "CAMERA_CAPTURE": "Захватить",
+    "CAMERA_SAVE": "Использовать изображение",
+    "CAMERA_CANCEL": "Отмена"
+}

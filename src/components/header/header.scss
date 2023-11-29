@@ -1,0 +1,70 @@
+ion-header {
+	flex-shrink: 0;
+	
+	ion-navbar {
+		display: flex;
+		text-align: center;
+	}
+	.main-header {
+		background: rgba(222, 233, 244, 0.4);
+		// background-image: unset !important;
+		.toolbar-content {
+			margin-bottom: -3px;
+		}
+			
+		.title-text div {
+			color: black !important;
+		}
+		img {
+			max-height: 20vh !important;
+			max-width: 100vw !important;
+		}
+		.title-banner {
+			width: 100%;
+		}
+	}
+	.toolbar-title {
+		white-space: normal;
+		font-weight: normal !important;
+		font-size: $font_size_support_question !important;
+		padding: 8px !important;
+		margin: 1vh 5vw !important;
+		color: white !important;
+	}
+	// .question-header ion-title {
+	// }	
+	// .toolbar-title div {
+	// 	margin: 1vh 5vw !important;
+	// }
+	.toolbar-background {
+		background-color: transparent;
+	}
+	.bar-button {
+		height: 100% !important;
+	}    
+	.toolbar {
+		padding: 0px !important;
+	}
+	ion-icon {
+		font-size: 10vh !important;
+	}
+
+	.portrait {
+		.toolbar-title {
+			font-size: $font_size_support_question_portrait !important;
+		}
+
+		ion-navbar.question-header {
+			height: auto !important;
+			max-height: auto !important;
+			min-height: auto !important;
+		}
+		.title-banner, .img-logo {
+			max-height: 12vh !important;
+        }		
+		ion-icon {
+			display: inline-block;
+			font-size: 10vw !important;
+		}    
+	}
+}

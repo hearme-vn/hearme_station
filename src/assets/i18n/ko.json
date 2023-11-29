@@ -1,0 +1,112 @@
+{
+    "LOGIN_login": "로그인",
+    "LOGIN_deviceid": "장치 ID",
+    "LOGIN_secret": "비밀",
+    "LOGIN_url": "URI",
+    "LOGIN_qrcode": "QR 코드 스캔", 
+    "LOGIN_processing": "프로세스 중...", 
+    "LOGIN_error": "인증 오류", 
+    "LOGIN_close": "문서 닫음", 
+        
+    "RATING_unhappy": "매우 만족스럽지 않음",
+    "RATING_accepted":"만족스럽지 않음", 
+    "RATING_good":"보통",
+    "RATING_excellent":"만족",
+    "RATING_inloved":"매우 만족",
+    
+    "COMMENT_comment":"귀하의 의견",
+    "COMMENT_sendfeedback":"피드백 보내기",
+    "COMMENT_name": "전체 이름",
+    "COMMENT_contact": "전화 번호",
+
+    "CONTACT_name": "전체 이름",
+    "CONTACT_phone": "전화 번호",
+    "CONTACT_email": "메일 주소",
+    "CONTACT_address": "주소",
+    "CONTACT_roomnumber": "객실 번호",
+        
+	"MESSAGE_Welcome": "우리의 서비스를 이용 해 주셔서 감사합니다. 귀하의 경험에 대한 의견을 남겨 주시면 감사하겠습니다",
+	"MESSAGE_Start_Feedback": "지금 피드백",
+    
+    "THANKGIVING_thank":"감사합니다!",
+    "THANKGIVING_explaination":"의견을 남겨 주셔서 감사합니다. 귀하의 의견은 우리가 우리의 서비스를 개선하고 더 나은 서비스를 제공하기 위해 매우 중요합니다",
+    "hearme_team":"듣기 팀",
+    
+    "TAB_FEEDBACK": "피드백",
+    "TAB_COLLECTION": "수집 매체",
+    
+    "RATING_CES_extremely_difficult": "극히 어려움",
+    "RATING_CES_very_difficult": "매우 어려움",
+    "RATING_CES_fairly_difficult": "대체로 어려움",
+    "RATING_CES_neither": "어느 쪽도 아님",
+    "RATING_CES_fairly_easy": "대체로 쉬움",
+    "RATING_CES_very_easy": "매우 쉬움",
+    "RATING_CES_extremely_easy": "무척 쉬움",
+    
+    "RATING_NPS_VERY_UNLIKELY": "매우 가능성이 희박",
+    "RATING_NPS_VERY_LIKELY": "매우 가능성이 높음",
+    
+    "RATING_NPS_1": "레벨 0",
+    "RATING_NPS_2": "레벨 1",
+    "RATING_NPS_3": "레벨 2",
+    "RATING_NPS_4": "레벨 3",
+    "RATING_NPS_5": "레벨 4",
+    "RATING_NPS_6": "레벨 5",
+    "RATING_NPS_7": "레벨 6",
+    "RATING_NPS_8": "레벨 7",
+    "RATING_NPS_9": "레벨 8",
+    "RATING_NPS_10": "레벨 9",
+    "RATING_NPS_11": "레벨 10",
+    
+    "WELCOME_dear": "친애하는 ",
+    "WELCOME_customer": "고객님",
+    "WELCOME_invitation_expired": "피드백 시스템에 참여해 주셔서 감사합니다. 아쉽게도, 당신의 초대가 만료되었습니다. 우리의 프로세스는 여기에서 중지되겠습니다.",
+    "WELCOME_finish": "완료",
+	
+    "FEEDBACK_BACK": "뒤",
+    "FEEDBACK_NEXT": "다음",
+    
+    "PROMOTION_CODE": "프로모션 코드를 받으셨습니다. 나중에 사용하시도록 캡처해 두십시오",
+    "PROMOTION_SUGGESTION_FULL": "프로모션 코드를 얻기 위해 모든 질문에 답변해 주십시오",
+    "PROMOTION_SUGGESTION_PART": "프로모션 코드를 얻기 위해 질문에 답변해 주십시오",
+    
+    "TOAST_BUTTON_CLOSE": "가까이",
+    
+    "message": {
+        "DATA_PROCESSING": "프로세스 중...",
+
+        "INPUT_REQUIRED": "필요한 분야에 대한 정보를 입력하십시오",
+        "ANSWER_REQUIRED": "다음 페이지로 이동하기 전에 의견을 남겨주세요",
+        "FIELD_INVALID": "값이 잘못되었습니다",
+        "CAPTCHA_INVALID": "로봇이 아닌 실제 사용자임을 입증하지 않았습니다",
+        
+        "UNKNOWN": "데이터를 가져오는 데 알 수 없는 오류가 있습니다",
+        "NETWORK_DISCONNECTED": "네트워크가 오류입니다. 인터넷 연결을 확인하고 다시 시도하십시오",
+        "BARCODE_ERROR": "QR 코드를 스캔 할 수 없습니다. 기기를 확인하거나 새 코드를 만들고 다시 시도하십시오",
+        "BARCODE_INVALID": "이 QR 코드가 잘못되었습니다. 새 QR 코드를 만들고 다시 시도하십시오",
+        "DEVICE_INACTIVE": "기기가 비활성 상태입니다. 활성화하고이 장치를 동기화해 주십시오",
+        "SURVEY_INACTIVE": "이 설문 조사는 비활성 상태입니다. 이 장치에 대한 설문조사를 재구성해 주십시오",
+
+        "EXCEED_MAX_SIZE": "파일 업로드가 허용되는 최대 크기 (300KB)를 초과합니다. 작업이 거부되었습니다.",
+        "FILE_UPLOADING_ERROR": "파일 업로드 중 오류. 나중에 다시 시도하십시오",
+        "HAVENOT_CAPTURE_IMAGE": "저장을 위해 카메라에서 이미지를 캡처하지 않았습니다."
+
+    },
+    "httpcode": {
+        "DVT02": "잘못된 장치 정보. 작업이 거부됨",
+        
+        "DVA01": "잘못된 장치 정보. 작업이 거부됨",
+        "DVA02": "하드웨어 ID는 무효일 수 없습니다. 작업이 거부됨",
+        "DVA03": "OS 정보는 뭏효일 수 없습니다. 작업이 거부됨",
+        
+        "DAS01": "장치 ID가 잘못되었습니다. 작업이 거부됨",
+        "DAS02": "이 장치 그룹의 설문 조사가 활성화되지 않았습니다. 설문조사를 구성하십시오"
+    },
+
+    "UPLOADER_FILE": "파일",
+    "UPLOADER_IMAGE": "이미지",
+
+    "CAMERA_CAPTURE": "포착",
+    "CAMERA_SAVE": "이미지 사용",
+    "CAMERA_CANCEL": "취소"
+}

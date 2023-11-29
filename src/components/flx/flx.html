@@ -1,0 +1,32 @@
+<!-- Template for FLX Component
+    Created by: VXThuc@yahoo.com
+    Organization: LabsOfThings.com
+    Project: hearme.vn
+    Date: 04 Aug 2020
+-->
+
+<!-- FOR QUESTION DISPLAYED IN FORM-BASED SURVEY -->
+<ion-row>
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<ng-template [ngIf]="survey?.data?.scales<=6">
+    <ion-row *ngIf="survey?.data.col_posts?.length > 0">  
+        <ion-col *ngFor="let i of lstIndexScales" class="rating_item main_border_color"
+            [ngClass]="{'selected': survey?.feedback?.rating==i+1}" >
+            <img tappable (click)="iconClicked(i+1)" src="{{appConf.img_server + survey?.data?.col_posts[i]?.fileName}}" />
+            <div [innerHTML]="survey?.data?.col_posts[i]?.content"></div>
+        </ion-col>
+    </ion-row>
+</ng-template>
+<ng-template [ngIf]="survey?.data?.scales>6">
+    <ion-row *ngIf="survey?.data.col_posts?.length > 0">  
+        <ion-col col-3 col-sm-2 *ngFor="let i of lstIndexScales" class="rating_item main_border_color"
+            [ngClass]="{'selected': survey?.feedback?.rating==i+1}" >
+            <img tappable (click)="iconClicked(i+1)" src="{{appConf.img_server + survey?.data?.col_posts[i]?.fileName}}" />
+            <div [innerHTML]="survey?.data?.col_posts[i]?.content"></div>
+        </ion-col>
+    </ion-row>
+</ng-template>

@@ -1,0 +1,61 @@
+page-message {
+	// opacity: 0.9 !important;
+    background: white;
+	ion-navbar {
+        height: 12vh;
+	}    
+	ion-navbar .toolbar-background {
+		background: #1DCE6C;
+	}
+
+	.title-logo {
+		height: 100% !important;
+	}
+
+    .thanks {
+        font-size: 2vw;
+        text-align: center;
+        padding: 0px;
+    }
+    .scroll-content {
+        margin-top: 0px !important;
+    }
+    .author{
+        text-align: right!important;
+        font-style: italic;
+    }
+	
+	.sendFeedback {
+		height: 8vh;
+		border: 2px #1DCE6C solid;
+		text-transform: uppercase;
+		font-size: 2.0rem !important;
+	}
+
+    @media (min-width: 960px) {
+        .thank-face {
+            max-width: 100%;
+            padding-top: 10px;
+            padding-bottom: 20px;
+        }
+        .thanks {
+            font-size: 2em;
+            text-align: center;
+        }
+        .point-code{
+            font-size: 2em;
+        }
+        .bar-button-ios{
+            height: 52px;
+        }
+    }
+
+    .portrait {
+        ion-navbar {
+            height: 7vh;
+        }    
+        .sendFeedback {
+            height: 5vh;
+        }    
+    }
+}

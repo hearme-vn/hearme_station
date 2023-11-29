@@ -1,0 +1,42 @@
+page-index-survey {
+    .question {
+        font-size: $font_size_index_question;
+        padding: 0 0 2vh 0;
+    }
+    .scroll-content {
+        margin: 0px !important;
+    }
+    /*Mobile*/
+    @media (max-width: 570px)
+    {
+        .question {
+            font-size: $font_size_index_question_portrait;
+        }
+    }
+
+}
+
+.theme_public {
+    .feedbackObject {
+        margin-top: 1vh; 
+        margin-right: -2vw;
+        margin-left: 2vw;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .feedbackObject div {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        font-size: $font_size_feedback_object;
+        padding: 2vh 0;
+        margin-top: -4px;
+    }
+
+    /*Mobile*/
+    @media (max-width: 570px) {
+        .feedbackObject div {
+            font-size: $font_size_feedback_object_portrait;
+        }    
+    }
+}

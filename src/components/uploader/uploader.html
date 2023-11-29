@@ -1,0 +1,44 @@
+<!--
+    Created by: VXThuc@yahoo.com
+    Organization: LabsOfThings.com
+    Project: hearme.vn   
+    Date: 06 Nov 2020
+    Purpose: For upload files and capture images
+-->
+<ion-row [ngClass]="appInit.screen_orientation">
+    <!-- WEB APP: Select file for uploading button - for web app version -->
+    <ion-col align="right">
+        <ng-container *ngIf="selector.file_button">
+            <ion-input type="file" (change)="selectedEvent($event)" name="localFile" accept="*/*" style="display:none" enctype="multipart/form-data"></ion-input>
+            <button ion-button class="all-buttons main_background_color main_border_color" (click)="selector.selectFile()">
+                <span>{{ 'UPLOADER_FILE' | translate }}</span> &nbsp;
+                <ion-icon name="attach"></ion-icon>
+            </button>
+        </ng-container>
+        <button ion-button *ngIf="selector.camera_button" class="all-buttons main_background_color main_border_color" 
+            (click)="selector.captureFromCamera()">
+            <span>{{ 'UPLOADER_IMAGE' | translate }}</span> &nbsp;
+            <ion-icon name="camera"></ion-icon>
+        </button>        
+    </ion-col>
+</ion-row>
+ 
+<ion-row class="items" [ngClass]="appInit.screen_orientation">
+    <ion-col col-4 col-lg-3 *ngFor="let item of uploaded_files; let i = index">
+        <ng-container *ngIf="item.type==1">
+            <span col-10 >{{item.description}}</span>
+        </ng-container>
+        <ng-container *ngIf="item.type==0">
+            <img src="{{appConf.dataFront_service + 'post/get/' + item.id + '?token=' + token}}"(dblclick)="setPreviewImage(i)">
+        </ng-container>
+
+        <ion-buttons align="right">
+            <button *ngIf="item.type==0" ion-button class="all-buttons actions" (click)="viewImage(i)">
+                <ion-icon ios="ios-search" md="md-search"></ion-icon>
+            </button>
+            <button ion-button class="all-buttons actions" (click)="deleteUploadedFile(i)">
+                <ion-icon class="delete" ios="ios-close" md="ios-close-outline" tappable></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-col>
+</ion-row>

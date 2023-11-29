@@ -1,0 +1,106 @@
+<!-- General button, tabs, navigator for pages -->
+<!-- For First survey page -->
+<ion-row no-border *ngIf="survey && survey?.isFirst" [ngClass]="appInit.screen_orientation">
+    <!-- Copyright box -->
+    <ion-col col-3 col-lg-2 class="text-copyright text-left" align-self-end>© hearme.vn</ion-col>
+
+    <!-- Navigation box -->
+    <ion-col col-6 col-lg-8>
+        <ion-row class="navigations">
+            <ion-col col-6 *ngIf="tabs?.length>1">
+                <button ion-button col-12 class="all-buttons main_border_color" (click)="controller.goToCollectionPage()"
+                    [ngClass]="(survey.data?.type!=0 && survey.data?.type!=1 && survey.data?.type!=2 && survey.data?.type!=10)? 'main_text_color':'main_background_color'">
+                    <span class="hidden-xs hidden-sm hidden-md" *ngIf="!tabs || (tabs.length<2) || !tabs[1]?.label">{{ 'TAB_COLLECTION' | translate }}</span>
+                    <span class="hidden-xs hidden-sm hidden-md" *ngIf="tabs && (tabs.length>1) && tabs[1]?.label">{{ tabs[1].label }}</span>
+                    <ion-icon class="hidden-lg hidden-xl" ios="md-images" md="md-images"
+                        [ngClass]="(survey.data?.type!=0 && survey.data?.type!=1 && survey.data?.type!=2 && survey.data?.type!=10)? 'main_text_color':''">
+                    </ion-icon>
+                </button>
+            </ion-col>
+            <ion-col col-6 *ngIf="survey.data?.type!=0 && survey.data?.type!=1 && survey.data?.type!=2 && survey.data?.type!=10">
+                <button ion-button col-12 class="all-buttons main_background_color main_border_color" (click)="controller.sendFeedback()">
+                    <span class="hidden-xs hidden-sm hidden-md">{{ survey?.isLast? ('COMMENT_sendfeedback' | translate):('FEEDBACK_NEXT' | translate)}}&nbsp;&nbsp;</span>
+                    <ion-icon ios="md-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+                </button>        
+            </ion-col>
+        </ion-row>
+    </ion-col>
+
+    <!-- Language combobox -->
+    <ion-col col-3 col-lg-2 class="text-right cbo-lang" align-self-end>
+        <ul class="cbo-lang-list" *ngIf="appInit?.languages?.isShow && appInit?.languages?.datas?.length > 1">
+            <li tappable *ngFor="let item of appInit?.languages.datas" (click)="controller.changeLanguage(item)">
+                <img src="{{ item.flag }}"> 
+                <span>{{ item.name }}</span>
+            </li>
+        </ul>
+        <div tappable (click)="controller.showHideLanguageBox()" class="cbo-lang-selected" *ngIf="appInit?.languages?.selected.flag && appInit?.languages?.datas?.length > 1">
+            <img name="hearme-lang" [src]="appInit?.languages?.selected.flag"/>
+            <ion-icon *ngIf="appInit?.languages?.datas?.length > 1" class="lang-arrow-up" name="arrow-dropup"></ion-icon>
+        </div>
+    </ion-col>
+</ion-row>
+
+<!-- For Middle survey page -->
+<ion-row no-border *ngIf="survey && !survey?.isFirst" [ngClass]="appInit.screen_orientation">
+    <ion-col col-4 class="carousel-indicators">
+        <ul *ngIf="survey_length>1">
+            <li *ngFor="let page of pages" [ngClass]="(page==survey_index)? 'navigation_indicator':''" ></li>
+        </ul>
+    </ion-col>
+    <ion-col col-8>
+        <ion-row class="navigations">
+            <ion-col col-6>    
+                <button col-12 ion-button class="all-buttons main_text_color main_border_color" (click)="controller.runPreviousSurvey()">
+                    <ion-icon class="main_text_color" ios="md-arrow-dropleft" md="md-arrow-dropleft"></ion-icon>&nbsp;&nbsp;&nbsp;
+                    <span  class="hidden-xs hidden-sm hidden-md"> {{'FEEDBACK_BACK' | translate}}</span>
+                </button>
+            </ion-col>
+            <ion-col col-6>
+                <button col-12 ion-button class="all-buttons main_background_color main_border_color" (click)="controller.sendFeedback()">
+                    <span  class="hidden-xs hidden-sm hidden-md"> {{survey?.isLast? ('COMMENT_sendfeedback' | translate):('FEEDBACK_NEXT' | translate)}} &nbsp;&nbsp;&nbsp;</span>
+                    <ion-icon ios="md-arrow-dropright" md="md-arrow-dropright"></ion-icon>
+                </button>
+            </ion-col>        
+        </ion-row>
+    </ion-col>
+</ion-row>
+
+<!-- For Login page -->
+<ion-row *ngIf="pageName=='LoginPage'" [ngClass]="appInit.screen_orientation">
+    <ion-col col-6 class="text-copyright text-left" align-self-end>© hearme.vn</ion-col>
+    <ion-col col-6 class="text-right cbo-lang">
+        <ul class="cbo-lang-list" *ngIf="appInit?.languages?.isShow && appInit?.languages?.datas?.length > 1">
+            <li *ngFor="let item of appInit?.languages.datas" (click)="controller.changeLanguage(item)">
+                <img src="{{ item.flag }}"> 
+                <span>{{ item.name }}</span>
+            </li>
+        </ul>
+        <ion-icon (click)="controller.showHideUrl()" id="api_setting" class="icon icon-md ion-md-settings"></ion-icon> 
+        <div (click)="controller.showHideLanguageBox()" class="cbo-lang-selected" *ngIf="appInit?.languages?.selected.flag">
+            <img name="hearme-lang" [src]="appInit?.languages?.selected.flag"/>
+            <ion-icon *ngIf="appInit?.languages?.datas?.length > 1" class="lang-arrow-up" name="arrow-dropup"></ion-icon>
+        </div>
+    </ion-col>
+</ion-row>
+
+<!-- For Collection page -->
+<ion-row *ngIf="pageName=='CollectionPage'" [ngClass]="appInit.screen_orientation">
+    <ion-col col-3 class="text-copyright text-left" align-self-end>© hearme.vn</ion-col>
+    <ion-col col-6>
+        <button col-12 ion-button class="all-buttons main_background_color main_border_color" (click)="controller.gotoFeedback()">
+            <span *ngIf="!tabs || (tabs.length<1) || !tabs[0]?.label">{{ 'TAB_FEEDBACK' | translate }}</span>
+            <span *ngIf="tabs && (tabs.length>0) && tabs[0]?.label">{{ tabs[0].label }}</span>
+        </button>        
+    </ion-col>
+</ion-row>
+
+<!-- For Idle page -->
+<ion-row *ngIf="pageName=='IdlePage'" [ngClass]="appInit.screen_orientation">
+  <ion-col col-9 class="text-copyright text-left" align-self-end>© hearme.vn</ion-col>
+  <ion-col col-3>
+    <button col-12 ion-button class="all-buttons main_background_color main_border_color" (click)="controller.gotoLogin()">
+      <ion-icon ios="ios-key" md="md-key"></ion-icon>
+    </button>
+  </ion-col>
+</ion-row>

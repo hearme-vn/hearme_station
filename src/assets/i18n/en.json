@@ -1,0 +1,112 @@
+{
+    "LOGIN_login": "Login",
+    "LOGIN_deviceid": "Device ID",
+    "LOGIN_secret": "Secret",
+    "LOGIN_url": "URI",
+    "LOGIN_qrcode": "Scan QRCode", 
+    "LOGIN_processing": "Procesing...", 
+    "LOGIN_error": "Authentication error", 
+    "LOGIN_close": "Close", 
+        
+    "RATING_unhappy": "Very unsatisfied",
+    "RATING_accepted":"Unsatisfied", 
+    "RATING_good":"Neutral",
+    "RATING_excellent":"Satisfied",
+    "RATING_inloved":"Very satisfied",
+    
+    "COMMENT_comment":"Your comment",
+    "COMMENT_sendfeedback":"Send feedback",
+    "COMMENT_name": "Full name",
+    "COMMENT_contact": "Phone number",
+
+    "CONTACT_name": "Your full name",
+    "CONTACT_phone": "Phone number",
+    "CONTACT_email": "Email",
+    "CONTACT_address": "Address",
+    "CONTACT_roomnumber": "Room number",
+        
+	"MESSAGE_Welcome": "Thank you for using our service. We appreciate if you leave your feedback on your experience here",
+	"MESSAGE_Start_Feedback": "Feedback now",
+    
+    "THANKGIVING_thank":"Thank you",
+    "THANKGIVING_explaination":"Thank you for leaving your feedback. Your feedback is very important for us to improve our service and serve better",
+    "hearme_team":"Operation team",
+    
+    "TAB_FEEDBACK": "Feedback",
+    "TAB_COLLECTION": "Collecttion media",
+    
+    "RATING_CES_extremely_difficult": "Extremely difficult",
+    "RATING_CES_very_difficult": "Very difficult",
+    "RATING_CES_fairly_difficult": "Fairly difficult",
+    "RATING_CES_neither": "Neither",
+    "RATING_CES_fairly_easy": "Fairly easy",
+    "RATING_CES_very_easy": "Very easy",
+    "RATING_CES_extremely_easy": "Extremely easy",
+    
+    "RATING_NPS_VERY_UNLIKELY": "Very unlikely",
+    "RATING_NPS_VERY_LIKELY": "Very likely",
+    
+    "RATING_NPS_1": "Level 0",
+    "RATING_NPS_2": "Level 1",
+    "RATING_NPS_3": "Level 2",
+    "RATING_NPS_4": "Level 3",
+    "RATING_NPS_5": "Level 4",
+    "RATING_NPS_6": "Level 5",
+    "RATING_NPS_7": "Level 6",
+    "RATING_NPS_8": "Level 7",
+    "RATING_NPS_9": "Level 8",
+    "RATING_NPS_10": "Level 9",
+    "RATING_NPS_11": "Level 10",
+    
+    "WELCOME_dear": "Dear ",
+    "WELCOME_customer": "Customer",
+    "WELCOME_invitation_expired": "Thank you for joining our feedback system. Unforturnately, your invitation is expired. Our process will be stopped here.",
+    "WELCOME_finish": "Finish",
+	
+    "FEEDBACK_BACK": "Back",
+    "FEEDBACK_NEXT": "Next",
+    
+    "PROMOTION_CODE": "You've got a promotion code. Please capture it to redeem later",
+    "PROMOTION_SUGGESTION_FULL": "Answer all questions to get promotion code",
+    "PROMOTION_SUGGESTION_PART": "Answer questions to get promotion code",
+    
+    "TOAST_BUTTON_CLOSE": "Close",
+    
+    "message": {
+        "DATA_PROCESSING": "Procesing data...", 
+
+        "INPUT_REQUIRED": "Please input information for the required fields",
+        "ANSWER_REQUIRED": "Please leave your feedback before going to next page",
+        "FIELD_INVALID": "Field value is invalid",
+        "CAPTCHA_INVALID": "You have not validated that you are real user, not a robot",
+        
+        "UNKNOWN": "There is unknown error in getting data",
+        "NETWORK_DISCONNECTED": "Network is error. Check Internet connection and try again",
+        "BARCODE_ERROR": "Can not scan QRCode. Check your device or create new code and try again",
+        "BARCODE_INVALID": "This QRCode is invalid. Create new QR code and try again",
+        "DEVICE_INACTIVE": "Your device is inactive. Activate it and synchronize this device",
+        "SURVEY_INACTIVE": "This survey is inactive. Re-configure survey for this device",
+
+        "EXCEED_MAX_SIZE": "Uploading file exceeds allowed max size: 300 KB. Operation is rejected",
+        "FILE_UPLOADING_ERROR": "Error in uploading file. Please try again later",
+        "HAVENOT_CAPTURE_IMAGE": "You have not captured image from camera for saving"
+
+    },
+    "httpcode": {
+        "DVT02": "Wrong device information. Operation is rejected",
+        
+        "DVA01": "Wrong device information. Operation is rejected",
+        "DVA02": "Hardware id cannot be null. Operation is rejected",
+        "DVA03": "os information cannot be null. Operation is rejected",
+        
+        "DAS01": "Device id is invalid. Operation is rejected",
+        "DAS02": "This device group does not have active survey. Configure survey for this device"
+    },
+
+    "UPLOADER_FILE": "Files",
+    "UPLOADER_IMAGE": "Images",
+
+    "CAMERA_CAPTURE": "Capture",
+    "CAMERA_SAVE": "Use image",
+    "CAMERA_CANCEL": "Cancel"
+}

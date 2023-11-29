@@ -1,0 +1,34 @@
+csat {
+    ion-row {
+        justify-content: center;        
+    }
+    // .question {
+    //     padding-top: 10px;
+    //     font-size: 3.5vw;
+    // }
+    .motion-faces {
+        font-size: $font_size_factor_description;
+    }
+	.selected {
+        // border-bottom: 5px groove #1DCE6C;
+        // border-bottom: 5px groove map-get($colors, primary);
+        border-bottom: 5px groove color($colors, primary, #1DCE6C);
+	}
+    .rating-face {
+        width: 100%;
+    }
+    /*Mobile*/
+    @media (max-width: 570px)
+    {
+        // .question {
+        //     font-size: 5vw;
+        // }
+        .motion-faces {
+            font-size: $font_size_factor_description_portrait;
+        }
+        ion-col {
+            padding: 0 4vw !important;
+        }
+    }    
+        
+}

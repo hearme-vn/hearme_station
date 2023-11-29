@@ -1,0 +1,34 @@
+text {
+    ion-label, ion-textarea, ion-input {
+        font-size: $font_size_primary;
+        color: inherit !important;
+    }
+
+    ion-item {
+        background: transparent !important;
+    }
+    
+    .required ion-label {
+        font-weight: bold;
+    }
+    .required ion-label:after {
+        color: #e32;
+        content: ' *';
+        display:inline;
+    }      
+    .form_text textarea {
+        border: grey solid 1px;
+        font-size: $font_size_primary;
+        // margin: 5px !important;
+        padding: 5px;
+    }
+
+    /*Mobile*/
+    @media (max-width: 570px) {
+        ion-label, ion-textarea, ion-input {
+            font-size: $font_size_primary_portrait;
+        }    
+    }
+
+}
+    

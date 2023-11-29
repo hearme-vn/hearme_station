@@ -1,0 +1,30 @@
+<!--
+  Created by: VXThuc@yahoo.com
+  Organization: LabsOfThings.com
+  Project: hearme.vn   
+  Date: 06 Aug 2020
+  Purpose: For open question and text field
+-->
+<ng-template [ngIf]="!in_form">
+    <ion-item [ngClass]="{'required': survey?.data?.required}">
+        <!-- <ion-label floating>{{'COMMENT_comment' | translate}}</ion-label> -->
+        <ion-textarea enterkeyhint="done" tappable autofocus #page_textarea id="page_textarea" name="comment" 
+            [(ngModel)]="feedback.comment" (ionChange)=updateDataChange()>
+        </ion-textarea>
+    </ion-item>
+    <ion-item *ngIf="INCLUDE_CONTACT_FIELDS" [ngClass]="{'required': REQUIRED_CONTACT_FIELDS}">
+        <ion-label floating>{{ 'COMMENT_name' | translate}}</ion-label>
+        <ion-input tappable name="name" [(ngModel)]="feedback.name" (ionChange)=updateDataChange()></ion-input>
+    </ion-item>
+    <ion-item *ngIf="INCLUDE_CONTACT_FIELDS" [ngClass]="{'required': REQUIRED_CONTACT_FIELDS}">
+        <ion-label floating>{{ 'COMMENT_contact' | translate}}</ion-label>
+        <ion-input tappable type="tel" name="contact" [(ngModel)]="feedback.contact" (ionChange)=updateDataChange()>
+        </ion-input>
+    </ion-item>
+
+</ng-template>
+
+<ng-template [ngIf]="in_form">
+    <ion-label class="question" [innerHTML]="survey?.question" [ngClass]="{'required': survey?.data?.required}"></ion-label>
+    <ion-textarea tappable class="form_text" type="text" [(ngModel)]="feedback.comment" (ionChange)=updateDataChange() size="1"></ion-textarea>
+</ng-template>

@@ -1,0 +1,40 @@
+multi-selection {
+
+    ion-row {
+        justify-content: center;
+    }
+    .question-label{
+        font-size: $font_size_factor_description;
+        background-color: transparent !important;
+    }
+    .question-label .item-inner{
+        padding: 14px 0px 13px 0px;
+    }
+    .checkbox .checkbox-icon {
+        -ms-transform: scale(2);        /* IE */
+        -moz-transform: scale(2);       /* FF */
+        -webkit-transform: scale(2);    /* Safari and Chrome */
+        -o-transform: scale(2);         /* Opera */
+    }
+    .factor {
+        display: inline-block;
+        vertical-align: top;
+        font-size: $font_size_factor_description !important;
+        min-width: 20%;
+
+        img {
+            max-width: 30vw;
+        }
+    }
+
+    /*Mobile*/
+    @media (max-width: 570px) {
+        ion-label {
+            font-size: $font_size_factor_description_portrait;
+        }
+        .factor {
+            font-size: $font_size_factor_description_portrait !important;
+        }        
+    }
+    
+}

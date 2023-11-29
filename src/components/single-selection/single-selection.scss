@@ -1,0 +1,61 @@
+single-selection {
+    ion-row {
+        justify-content: center;
+    }
+    .radio .radio-icon {
+        -ms-transform: scale(2);        /* IE */
+        -moz-transform: scale(2);       /* FF */
+        -webkit-transform: scale(2);    /* Safari and Chrome */
+        -o-transform: scale(2);         /* Opera */
+    }
+
+    .factor {       // Image based survey
+        display: inline-block;
+		vertical-align: top;
+        font-size: $font_size_factor_description;
+        
+        min-width: 20%;
+
+        img {
+            max-width: 30vw;
+        }
+    }    
+    .question-label{
+        // font-size: $font_size_factor_description !important;
+        background-color: transparent;        
+    }
+    .question-label .item-inner{
+        padding: 14px 0px 13px 0px;
+    }
+    ion-label {         // Text based survey
+        font-size: $font_size_factor_description;
+        padding: 3vh 2vw 3vh 0px;
+        margin: 0px !important;
+        white-space: normal !important;
+        line-height: 1.5;
+    }
+	.factorSelection {
+		height: auto;
+		background-color: transparent !important;
+		box-shadow: none;
+	}
+    .portrait {
+        ion-item {
+            padding: 0px !important;
+        }
+    }
+
+    /*Mobile*/
+    @media (max-width: 570px) {
+        ion-label, .factor {
+            font-size: $font_size_factor_description_portrait;
+        }
+    
+    }
+}
+
+// .portrait {
+//     single-selection .factor {
+//         font-size: $font_size_factor_description_portrait !important;
+//     }
+// }

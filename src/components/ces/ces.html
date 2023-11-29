@@ -1,0 +1,42 @@
+<!-- CES component template -->
+
+<!-- FOR SURVEY QUESTION -->
+<ion-row>  
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<!-- RATING LEVELS FOR LARGE SCREEN -->
+<ion-row class="motion-faces hidden-xs">
+    <ion-col class="main_border_color" *ngFor="let level_key of ces_level_keys; let i = index" 
+        [ngClass]="{'selected': survey?.feedback?.rating==i+1}">
+        <div tappable (click)="iconClicked(i+1)" class="rating-circle ces-background-{{i+1}}">
+            <div class="ratinglevel-text">{{i+1}}</div>
+        </div>
+        <div class="rating-ces ces-background-{{i+1}}"></div>
+        <div>{{ level_key | translate }}</div>
+    </ion-col>
+</ion-row>
+
+<!-- RATING LEVELS FOR SMALL SCREEN -->
+<div class="small hidden-sm hidden-md hidden-lg hidden-xl">
+	<ion-row>  
+        <ion-col col-12 class="text-left text-very-unlikely">
+            {{ 'RATING_CES_extremely_difficult' | translate }}
+        </ion-col>
+    </ion-row>
+    <ion-row class="motion-faces">
+        <ion-col class="main_border_color" col-3 *ngFor="let level_key of ces_level_keys; let i = index" 
+            [ngClass]="{'selected': survey?.feedback?.rating==i+1}">
+            <div tappable (click)="iconClicked(i+1)" class="rating-circle ces-background-{{i+1}}">
+                <div class="ratinglevel-text">{{i+1}}</div>
+            </div>
+        </ion-col>    
+    </ion-row>
+	<ion-row>  
+        <ion-col col-12 class="text-right text-very-likely">
+            {{ 'RATING_CES_extremely_easy' | translate }}
+        </ion-col>
+    </ion-row>
+</div>

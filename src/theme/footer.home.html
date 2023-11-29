@@ -1,0 +1,12 @@
+    <ion-col col-3 class="text-copyright" *ngIf="survey?.isFirst">
+      <div class="slide-active display-tablet" (click)="appInit.updateApp_State()" *ngIf="tabs?.length>1">
+        <span *ngIf="appInit?.active_tab_feedback_name == '' || appInit?.active_tab_feedback_name == null">{{ 'TAB_FEEDBACK' | translate }}</span>
+        <span *ngIf="appInit?.active_tab_feedback_name != ''">{{appInit?.active_tab_feedback_name}}</span>
+      </div>
+    </ion-col>
+    <ion-col col-3 class="text-copyright" *ngIf="survey?.isFirst">
+      <div class="slide-default display-tablet" (click)="appInit.goToCollectionPage()" *ngIf="tabs?.length>1">
+          <span *ngIf="!tabs[1].tab_name?.value">{{ 'TAB_COLLECTION' | translate }}</span>
+          <span *ngIf="tabs[1].tab_name?.value">{{tabs[1].tab_name.value}}</span>
+      </div>
+    </ion-col>

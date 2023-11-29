@@ -1,0 +1,15 @@
+
+<ion-content class="collection-content">
+    <ion-slides autoplay="5000" loop="true" speed="500" class="slides" pager="true" *ngIf="mediaType == 1" 
+        (ionSlideDidChange)="slideChanged()" (click)="gotoFeedback()">
+        <ion-slide class="collection-backgroud" *ngFor="let collection of collections" [ngStyle]="getMyStyles(collection)"></ion-slide>
+    </ion-slides>
+    <div class="video-container" *ngIf="mediaType == 2">
+        <div class="video-cover" tappable  (click)="gotoFeedback()"></div>
+		<div id="ytPlayer"></div>
+    </div>
+</ion-content>
+
+<ion-footer
+    [controller]=this [pageName]="'CollectionPage'">
+</ion-footer>

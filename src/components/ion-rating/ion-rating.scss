@@ -1,0 +1,26 @@
+ion-rating {
+    ion-icon {
+        color: #888888;
+        display: inline-block;
+        font-size: 2em;
+    }
+    .ion-md-star, ion-rating, .ion-ios-star {
+        color: orange !important;
+    }    
+    
+    .delete {
+        color: red !important;        
+        //padding-right: 2vw;
+        //padding-left: 2vw;
+        
+    }
+    
+    //tablet
+    @media (min-width: 960px)
+    {
+        ion-icon {
+            display: inline-block;
+            font-size: 2.5em;
+        }
+    }
+}

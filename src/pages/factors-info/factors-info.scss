@@ -1,0 +1,73 @@
+page-factors-info {
+    background: #FFF;
+    padding-top: 10px;
+
+    .scroll-content{
+		padding: 0px 20px 40vh 20px !important;
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    
+    ion-label div {
+        white-space: normal;
+    }
+    .survey-question {
+        font-size: $font_size_primary;
+        font-weight: bold;
+    }
+    .survey-description {
+        padding-left: 15px;
+        margin-top: 5px;
+		font-size: $font_size_secondary;
+    }
+    .content-popup {
+        overflow: auto;
+        text-align: left;
+        display: block;
+        border-bottom: 1px solid #cecece;
+    }
+    .footer {
+        position: absolute;
+        bottom:0;
+        // height: 9vh;
+        border-top: 1px solid #cecece;
+        background: #FFF;
+        z-index: 1000;
+        display: flex;
+        align-items: center;        
+    }
+    .btn-close {
+        height: 7vh;
+		font-size: $font_size_primary;
+        margin: 0px;
+		width: 100%;
+		padding: 10px;
+        // max-width: 250px;
+    }
+	
+	.portrait {
+    	height: 6.5vh;;
+
+		.survey-question {
+			font-size: $font_size_primary_portrait;
+		}
+		.survey-description {
+			padding-left: 15px;
+			margin-top: 5px;
+			font-size: $font_size_secondary_portrait;
+		}
+		.footer {
+			position: absolute;
+			bottom:0;
+			// height: 6vh !important;
+		}
+		.btn-close {
+			height: 5vh;
+			font-size: $font_size_primary_portrait;
+			// width: 40vw;
+            max-width: 250px;
+		}
+		
+	}
+
+}

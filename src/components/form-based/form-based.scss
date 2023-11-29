@@ -1,0 +1,18 @@
+form-based {
+    .question {
+        // padding-top: 10px;
+        font-size: $font_size_formbased_question;
+        margin: 0 0 16px 15px !important;
+        text-align: left;    
+    }
+
+
+    /*Mobile*/
+    @media (max-width: 570px)
+    {
+        .question {
+            font-size: $font_size_index_question_portrait;
+        }
+    }
+
+}

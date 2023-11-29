@@ -1,0 +1,112 @@
+{
+    "LOGIN_login": "Đăng nhập",
+    "LOGIN_deviceid": "Mã thiết bị",
+    "LOGIN_secret": "Mật khẩu",
+    "LOGIN_url": "URI",
+    "LOGIN_qrcode": "Quét mã QR", 
+    "LOGIN_processing": "Đang xử lý...", 
+    "LOGIN_error": "Lỗi xác thực", 
+    "LOGIN_close": "Đóng", 
+    
+    "RATING_unhappy": "Rất không hài lòng",
+    "RATING_accepted": "Không hài lòng", 
+    "RATING_good": "Bình thường",
+    "RATING_excellent": "Hài lòng",
+    "RATING_inloved": "Rất hài lòng",
+    
+    "COMMENT_comment":"Ý kiến của quý khách",
+    "COMMENT_sendfeedback":"Gửi phản hồi",
+    "COMMENT_name": "Họ tên",
+    "COMMENT_contact": "Số điện thoại",
+
+    "CONTACT_name": "Tên của quý khách",
+    "CONTACT_phone": "Số điện thoại",
+    "CONTACT_email": "Email",
+    "CONTACT_address": "Địa chỉ",
+    "CONTACT_roomnumber": "Số phòng",
+    
+	"MESSAGE_Welcome": "Cám ơn quý khách đã sử dụng dịch vụ của chúng tôi. Chúng tôi vô cùng biết ơn nếu quý khách để lại nhận xét về trải nghiệm của quý khách tại đây",
+	"MESSAGE_Start_Feedback": "Bắt đầu phản hồi",
+	
+    "THANKGIVING_thank":"Cám ơn quý khách",
+    "THANKGIVING_explaination":"Cám ơn quý khách đã để lại phản hồi. Những đóng góp của quý khách có ý nghĩa rất quan trọng để chúng tôi làm tốt hơn",
+    "hearme_team":"Đội ngũ vận hành",
+    
+    "TAB_FEEDBACK": "Phản hồi",
+    "TAB_COLLECTION": "Bộ sưu tập",
+    
+    "RATING_CES_extremely_difficult": "Rất khó",
+    "RATING_CES_very_difficult": "Khó",
+    "RATING_CES_fairly_difficult": "Hơi khó",
+    "RATING_CES_neither": "Bình thường",
+    "RATING_CES_fairly_easy": "Hơi dễ",
+    "RATING_CES_very_easy": "Dễ",
+    "RATING_CES_extremely_easy": "Rất dễ",
+    
+    "RATING_NPS_VERY_UNLIKELY": "Chắc chắn không",
+    "RATING_NPS_VERY_LIKELY": "Chắc chắn có",
+    
+    "RATING_NPS_1": "Mức 0",
+    "RATING_NPS_2": "Mức 1",
+    "RATING_NPS_3": "Mức 2",
+    "RATING_NPS_4": "Mức 3",
+    "RATING_NPS_5": "Mức 4",
+    "RATING_NPS_6": "Mức 5",
+    "RATING_NPS_7": "Mức 6",
+    "RATING_NPS_8": "Mức 7",
+    "RATING_NPS_9": "Mức 8",
+    "RATING_NPS_10": "Mức 9",
+    "RATING_NPS_11": "Mức 10",
+    
+    "WELCOME_dear": "Xin chào ",
+    "WELCOME_customer": "Quý khách",
+    "WELCOME_invitation_expired": "Cám ơn quý khách đã tham gia phản hồi về cho chúng tôi. Rất tiếc, mã khảo sát của quý khách đã hết hạn",
+    "WELCOME_finish": "Kết thúc",
+
+    "FEEDBACK_BACK": "Về trước",
+    "FEEDBACK_NEXT": "Tiếp theo",
+    
+    "PROMOTION_CODE": "Quý khách được nhận mã thưởng. Vui lòng chụp lại mã này để đổi thưởng",
+    "PROMOTION_SUGGESTION_FULL": "Trả lời tất cả các câu hỏi để nhận được mã điểm thưởng",
+    "PROMOTION_SUGGESTION_PART": "Trả lời câu hỏi để nhận được mã điểm thưởng",
+    
+    "TOAST_BUTTON_CLOSE": "Đóng",
+    
+    "message": {
+        "DATA_PROCESSING": "Đang xử lý...", 
+
+        "INPUT_REQUIRED": "Vui lòng nhập thông tin của các trường bắt buộc",
+        "ANSWER_REQUIRED": "Vui lòng gửi phản hồi trước khi chuyển trang tiếp theo",
+        "FIELD_INVALID": "Thông tin nhập chưa chính xác",
+        "CAPTCHA_INVALID": "Lỗi: Chưa xác nhận quý khách không phải là người máy",
+        
+        "UNKNOWN": "Có lỗi không xác định khi khởi tạo dữ liệu",
+        "NETWORK_DISCONNECTED": "Lỗi kết nối mạng. Hãy kiểm tra kết nối Internet và thử lại sau",
+        "BARCODE_ERROR": "Không thể quét được mã QR. Kiểm tra thiết bị hoặc tạo mã mới và thử lại",
+        "BARCODE_INVALID": "Mã QRCode không đúng. Tạo mã QR mới và thử lại",
+        "DEVICE_INACTIVE": "Thiết bị chưa được kích hoạt. Hãy kích hoạt và đồng bộ lại thiết bị này",
+        "SURVEY_INACTIVE": "Khảo sát chưa được kích hoạt. Hãy thiết lập lại cấu hình khảo sát cho thiết bị này",
+
+        "EXCEED_MAX_SIZE": "File vượt quá kích thước cho phép: 300 KB. Thao tác bị từ chối",
+        "FILE_UPLOADING_ERROR": "Có lỗi trong khi gửi file lên hệ thống. Vui lòng thử lại sau",
+        "HAVENOT_CAPTURE_IMAGE": "Quý khách vẫn chưa chọn ảnh để cập nhật"
+
+    },
+    "httpcode": {
+        "DVT02": "Sai thông tin của thiết bị. Đăng nhập bị từ chối",
+
+        "DVA01": "Thông tin thiết bị chưa chính xác",
+        "DVA02": "Không lấy được thông tin phần cứng",
+        "DVA03": "Không thể lấy được thông tin thiết bị",
+        
+        "DAS01": "Mã thiết bị chưa chính xác",
+        "DAS02": "Nhóm thiết bị chưa có khảo sát được kích hoạt. Hãy thiết lập lại cấu hình khảo sát cho thiết bị này"
+    },
+
+    "UPLOADER_FILE": "Tài liệu",
+    "UPLOADER_IMAGE": "Ảnh",
+
+    "CAMERA_CAPTURE": "Chụp ảnh",
+    "CAMERA_SAVE": "Chấp nhận",
+    "CAMERA_CANCEL": "Huỷ"
+}

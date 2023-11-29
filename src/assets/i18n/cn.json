@@ -1,0 +1,112 @@
+{
+    "LOGIN_login": "登入",
+    "LOGIN_deviceid": "设备代码",
+    "LOGIN_secret": "密码",
+    "LOGIN_url": "URI",
+    "LOGIN_qrcode": "扫描二维码", 
+    "LOGIN_processing": "处理中...", 
+    "LOGIN_error": "验证错误", 
+    "LOGIN_close": "关闭", 
+        
+    "RATING_unhappy": "很不满意",
+    "RATING_accepted":"不满意", 
+    "RATING_good":"已接受",
+    "RATING_excellent":"满意的",
+    "RATING_inloved":"很满意/非常满意",
+    
+    "COMMENT_comment":"您的意见",
+    "COMMENT_sendfeedback":"发送反馈",
+    "COMMENT_name": "全名",
+    "COMMENT_contact": "电话号码",
+
+    "CONTACT_name": "你的名字",
+    "CONTACT_phone": "电话号码",
+    "CONTACT_email": "电邮地址/邮件",
+    "CONTACT_address": "住址/地址",
+    "CONTACT_roomnumber": "房间数",
+        
+	"MESSAGE_Welcome": "感谢您使用我们的服务。 如果您在这里对您的经历发表评论，我们将非常感谢",
+	"MESSAGE_Start_Feedback": "开始回应",
+    
+    "THANKGIVING_thank":"谢谢您",
+    "THANKGIVING_explaination":"多谢您留下意见。 您的贡献对我们做得更好非常重要",
+    "hearme_team":"听力团队",
+    
+    "TAB_FEEDBACK": "意见反馈",
+    "TAB_COLLECTION": "馆藏",
+    
+    "RATING_CES_extremely_difficult": "非常困难",
+    "RATING_CES_very_difficult": "难",
+    "RATING_CES_fairly_difficult": "有点难",
+    "RATING_CES_neither": "通常来说/一般",
+    "RATING_CES_fairly_easy": "有点容易",
+    "RATING_CES_very_easy": "容易的",
+    "RATING_CES_extremely_easy": "很简单",
+    
+    "RATING_NPS_VERY_UNLIKELY": "绝对不是",
+    "RATING_NPS_VERY_LIKELY": "绝对是",
+    
+    "RATING_NPS_1": "0",
+    "RATING_NPS_2": "1 级",
+    "RATING_NPS_3": "2 级",
+    "RATING_NPS_4": "3 级",
+    "RATING_NPS_5": "4 级",
+    "RATING_NPS_6": "5 级",
+    "RATING_NPS_7": "6 级",
+    "RATING_NPS_8": "7 级",
+    "RATING_NPS_9": "8 级",
+    "RATING_NPS_10": "9 级",
+    "RATING_NPS_11": "10 级",
+    
+    "WELCOME_dear": "你好/您好",
+    "WELCOME_customer": "来宾/贵客户",
+    "WELCOME_invitation_expired": "感谢您参与我们的反馈。 抱歉，您的调查代码已过期",
+    "WELCOME_finish": "结束",
+	
+    "FEEDBACK_BACK": "背部",
+    "FEEDBACK_NEXT": "下一个",
+    
+    "PROMOTION_CODE": "您将收到奖励代码。请截取代码的屏幕截图以兑换",
+    "PROMOTION_SUGGESTION_FULL": "回答所有问题以获得奖励积分",
+    "PROMOTION_SUGGESTION_PART": "回答问题以获得奖励积分",
+    
+    "TOAST_BUTTON_CLOSE": "关闭",
+    
+    "message": {
+        "DATA_PROCESSING": "处理中...", 
+
+        "INPUT_REQUIRED": "请输入必填字段的信息",
+        "ANSWER_REQUIRED": "请发送反馈，然后再转到下一页",
+        "FIELD_INVALID": "输入的信息不正确",
+        "CAPTCHA_INVALID": "错误：未经确认您不是机器人",
+        
+        "UNKNOWN": "There is unknown error in getting data",
+        "NETWORK_DISCONNECTED": "Network is error. Check Internet connection and try again",
+        "BARCODE_ERROR": "Can not scan QRCode. Check your device or create new code and try again",
+        "BARCODE_INVALID": "This QRCode is invalid. Create new QR code and try again",
+        "DEVICE_INACTIVE": "Your device is inactive. Activate it and synchronize this device",
+        "SURVEY_INACTIVE": "This survey is inactive. Re-configure survey for this device",
+
+        "EXCEED_MAX_SIZE": "上載的文件超出了允許的最大大小：300 KB。 操作被拒絕",
+        "FILE_UPLOADING_ERROR": "上傳文件時出錯。 請稍後再試",
+        "HAVENOT_CAPTURE_IMAGE": "您尚未從相機拍攝圖像進行保存"
+
+    },
+    "httpcode": {
+        "DVT02": "Wrong device information. Operation is rejected",
+        
+        "DVA01": "Wrong device information. Operation is rejected",
+        "DVA02": "Hardware id cannot be null. Operation is rejected",
+        "DVA03": "os information cannot be null. Operation is rejected",
+        
+        "DAS01": "Device id is invalid. Operation is rejected",
+        "DAS02": "This device group does not have active survey. Configure survey for this device"
+    },
+
+    "UPLOADER_FILE": "檔案",
+    "UPLOADER_IMAGE": "圖片",
+
+    "CAMERA_CAPTURE": "捕獲",
+    "CAMERA_SAVE": "使用圖片",
+    "CAMERA_CANCEL": "取消"
+}

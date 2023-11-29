@@ -1,0 +1,8 @@
+<!-- template for the INFO component -->
+<div *ngIf="isShowPromotionCode" class="point-code">
+    <ngx-qrcode [qrc-value]="appInit.fbService.promotion_code"></ngx-qrcode>
+    <p>
+        {{ appInit.fbService.promotion_code }}
+    </p>
+</div>
+<p [innerHTML]="question_text"></p>

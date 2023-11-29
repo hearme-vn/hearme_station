@@ -1,0 +1,174 @@
+page-welcome {
+    ion-title {
+        padding: 0px !important;
+        position: unset !important;
+    }
+	.scroll-content {
+		margin: 0px !important;
+	}
+    .slide-default {
+        color: white;
+        height: 100%;
+        border: 2px #1DCE6C solid;
+        text-transform: uppercase;
+        display: table;
+        text-align: -webkit-center;
+		font-size: 6vh;
+		//padding: 10px;
+    }
+    .toolbar {
+        padding: 0px !important;
+        /* height: 10vh; */
+        line-height: 6vh;
+    }
+    .toolbar-title {
+        font-size: 4vh !important;
+        font-weight: normal !important;
+        padding: 0px;
+        white-space: normal;
+    }
+ 
+    ion-navbar {
+        height: 26vh !important;
+    }
+
+    ion-content .question {
+		padding: 2vh !important;
+	}
+
+    .question em, p {
+		font-style: normal !important;
+        font-size: 8vh;
+        color: black;
+    }
+    
+    .author {
+        text-align: right!important;
+		font-style: italic !important;
+    }
+	
+	.explaination em, p {
+		font-style: normal !important;
+	    font-size: 5vh;
+		margin: 10px;
+	}
+	
+    ion-navbar {
+        height: 100px;
+    }
+
+    .header-ios .toolbar-ios:last-child .toolbar-background-ios {
+        border-width: 0px;
+    }
+    .header::after{
+        background: none;
+    }
+    ion-title div {
+        color: #1DCE6C !important;
+        text-transform: uppercase;
+        font-size: 3.5rem !important;
+    }
+	ion-navbar.logo-header {
+		height: 20vh !important;
+	}  
+	.footer {
+		position: fixed;
+		bottom: 0px;
+		width: 100%;
+		z-index: 1000;
+		background: white;
+		position: relative;
+	}
+	.banner-header img {
+		max-width: 100vw !important
+	}
+	.title-logo img {
+		max-height: 20vh !important;
+		max-width: 100vw !important
+	}
+
+    .toolbar-background{
+        background-image: url('../assets/imgs/bg-header.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+	
+	@media (min-width: 768px) {
+		ion-content .suggestion {
+			font-size: 23px;
+		}
+		ion-title div {
+			font-size: 3.5rem !important;
+		}
+	}
+  
+  
+	/*Mobile*/
+	@media (max-width: 768px) {
+		ion-title div {
+			font-size: 1.3rem !important;
+		}        
+	}    
+	
+	.portrait {
+		.question {
+			margin: 2vh;
+		}
+
+		.title-logo {
+			height: 100% !important;
+		}
+		ion-navbar.question-header {
+			height: auto !important;
+			max-height: auto !important;
+			min-height: auto !important;
+		}
+		ion-navbar img {
+			max-height: 18vh !important;
+			max-width: 100vw !important
+		}
+		.welcome-content .scroll-content {
+			padding: 20vh 0 !important;
+		}
+		.scroll-content em {
+			font-size: 5vh;
+		}
+		.scroll-content p {
+			font-size: 3vh;
+			margin: 2vh !important;
+		}
+		.scroll-content span {
+			font-size: 5vh;
+            padding: 5px 0px 0px 0px;
+		}
+		
+		.button-lang {
+			width: 15vw;
+		}
+		
+		ion-icon {
+			//width: 10vw !important;
+		}
+		.title-logo img {
+			max-height: 18vh !important;
+			max-width: 100vw !important;
+		}		
+		.text-copyright {
+			font-size: 3.8vw;
+		}
+		ion-icon {
+			font-size: 6vh;
+            margin: 0px;
+            height: 6vh !important;
+		}
+        .cbo-lang .cbo-lang-selected .lang-selected-arrow {
+            font-size: 6vh;
+        }
+	}
+	
+	ion-header .toolbar-background {
+		background: rgba(222, 233, 244, 0.4) !important;
+		background-image: unset !important;
+	}
+}

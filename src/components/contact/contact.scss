@@ -1,0 +1,25 @@
+contact {
+    .required ion-label {
+        font-weight: bold;
+    }
+    .required ion-label:after {
+        color: #e32;
+        content: ' *';
+        display:inline;
+    }      
+
+    ion-label, .comment {
+        font-size: $font_size_primary !important;
+        color: black !important;
+    }
+    ion-item {
+        background: transparent !important;
+    }
+    
+    .portrait {
+        ion-label, .comment {
+            font-size: $font_size_primary_portrait !important;
+        }
+
+    }
+}

@@ -1,0 +1,42 @@
+<!--
+  Created by: VXThuc@yahoo.com
+  Organization: LabsOfThings.com
+  Project: hearme.vn
+  Date: 06 Aug 2020
+  Purpose: Template for form based surveys
+-->
+<!-- FOR ALL THEMES -->
+<ion-row *ngFor="let form_survey of survey?.childs; let i = index">
+    <ion-col col-12>
+        <csat *ngIf="form_survey?.data?.type==0"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </csat>
+        <nps *ngIf="form_survey?.data?.type==1"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </nps>
+        <ces *ngIf="form_survey?.data?.type==2"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </ces>
+        <flx *ngIf="form_survey?.data?.type==10"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </flx>
+        <stars *ngIf="form_survey?.data?.type==6"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </stars>
+        <multi-selection *ngIf="form_survey?.data?.type==4"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </multi-selection>
+        <single-selection *ngIf="form_survey?.data?.type==5"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </single-selection>
+        <text *ngIf="form_survey?.data?.type==7"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </text>
+        <contact *ngIf="form_survey?.data?.type==9"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </contact>
+        <uploader *ngIf="form_survey?.data?.type==12"
+            [appInit]=appInit [survey]=form_survey [startTime]="survey.startTime" [in_form]=1>
+        </uploader>
+    </ion-col>
+</ion-row>

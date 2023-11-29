@@ -1,0 +1,51 @@
+flx {
+    text-align: center;
+
+    // .question {
+    //     // padding-top: 10px;
+    //     font-size: 3.5vw;
+    //     color: black;
+    // }
+
+    ion-row {
+        justify-content: center;
+    }
+
+    .rating_item  {
+        cursor: pointer;
+
+		div {
+			font-size: $font_size_factor_description;
+        }
+        img {
+            width: 100%;
+            max-width: 30vw;
+        }        
+    }
+  
+	.selected {
+		border-bottom: 5px groove color($colors, primary, #1DCE6C);
+    }
+    
+    /*Mobile*/
+    @media (max-width: 570px) {
+        .rating_item div {
+            font-size: $font_size_factor_description_portrait;
+        }    
+    }
+
+}
+
+// .theme_public {
+//     /*Tablet*/
+//     @media (min-width: 768px)
+//     {
+//         .motion-faces {
+//             font-size: 3vh;
+//         }		  
+//     }
+    
+//     .portrait {
+
+//     }
+// }

@@ -1,0 +1,15 @@
+<ion-content class="{{appInit.screen_orientation}}">
+    <ion-row col-12 class="content-popup" *ngFor="let item of surveyInfo">
+        <p class="survey-question" [innerHTML]="item?.question"></p>
+        <p class="survey-description" [innerHTML]="item?.description"></p>
+    </ion-row>
+</ion-content>
+
+<ion-row ion-footer col-12 class="footer {{appInit.screen_orientation}}">
+    <ion-col col-8></ion-col>
+    <ion-col col-4>
+        <button class="btn-close footer-md main_background_color main_border_color" ion-button (click)="closeModal()" align-self-end>
+            {{ 'TOAST_BUTTON_CLOSE' | translate }}
+        </button>
+    </ion-col>
+</ion-row>

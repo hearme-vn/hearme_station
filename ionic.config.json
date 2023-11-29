@@ -1,0 +1,8 @@
+{
+    "name": "hearme station",
+    "integrations": {
+      "cordova": {}
+    },
+    "type": "ionic-angular",
+    "id": "com.labsofthings.hearmedevice"
+}  

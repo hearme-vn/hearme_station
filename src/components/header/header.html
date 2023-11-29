@@ -1,0 +1,33 @@
+<!-- General header for two case: main survey and suplement survey -->
+<!-- For main survey: NPS, CES, FLX and CSAT -->
+<ng-template [ngIf]="header=='main_header'">
+	<ion-navbar class="main-header {{appInit.screen_orientation}}" hideBackButton="true">
+		<ng-template [ngIf]="banner_image">
+			<img class="title-banner" src="{{appConf?.img_server + banner_image}}"/>
+		</ng-template>
+		<ng-template [ngIf]="!banner_image">
+			<img *ngIf="organization?.logo" class="img-logo" src="{{organization?.logo}}"/>
+			<ion-title *ngIf="!organization?.logo" class="title-text"> {{organization?.name}} </ion-title>
+		</ng-template>
+	</ion-navbar>
+</ng-template>
+
+<!-- For factor pages: Multi-selection, single selection, rating -->
+<ng-template [ngIf]="header=='sub_header'">
+	<ion-navbar class="question-header {{appInit.screen_orientation}}">
+		<ion-title>
+			<div [innerHTML]="survey?.question"></div>
+		</ion-title>
+        <ion-buttons end *ngIf="survey?.isShowInfo">
+            <button tappable ion-button block (click)="controller.openFactorsInfoPage()">
+                <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
+            </button>
+        </ion-buttons>
+		<ion-buttons end *ngIf="survey?.data?.type==7 || survey?.data?.type==9">
+			<button tappable ion-button block (click)="controller?.sendFeedback()">
+				<ion-icon mode="md" name="share-alt" *ngIf="!survey?.isLast"></ion-icon>
+				<ion-icon name="paper-plane" *ngIf="survey?.isLast"></ion-icon>
+			</button>
+		</ion-buttons>    
+	</ion-navbar>
+</ng-template>

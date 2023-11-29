@@ -1,0 +1,147 @@
+ion-footer {
+	padding: 0px 5px imp !important;
+	position: relative;
+	flex-shrink: 0;
+	
+	.navigations {
+		justify-content: center;
+		height: 100%;
+	}
+	.navigations ion-col {
+		padding: 0px;
+	}
+	ion-icon {
+		font-size: 7vh;
+		margin: -10px 0px;
+		color: grey;
+	}
+	
+	.carousel-indicators {
+		display: table;
+		text-align: left;
+		height: 6.5vh;
+	}
+	.carousel-indicators ul {
+		padding: 0px;
+		margin: 0px;
+		display: table-cell;
+		vertical-align: middle;
+		width: 100%;
+	}
+	.carousel-indicators li {
+		display: inline-block;
+		width: 1.5vw;
+		height: 1.5vw;
+		margin: 0px 0 0px 1.5vw;
+		background-color: rgb(157, 152, 152);
+		border-radius: 1.5vw;
+	}  
+
+	.all-buttons {
+		color: white;
+		// height: 100%;
+		height: 6.5vh;
+		border: 2px solid;
+		text-transform: uppercase;
+		// display: table;
+		display: block;
+		background-color: transparent;
+		text-align: -webkit-center;
+		font-size: $font_size_primary;
+
+		padding: 0px 5px;
+		margin: 0px;
+
+		// display: -webkit-box;
+		// display: -webkit-flex;
+		// display: -ms-flexbox;
+		// display: flex;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-flow: row nowrap;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+		-webkit-flex-shrink: 0;
+		-ms-flex-negative: 0;
+		flex-shrink: 0;
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+
+		ion-icon {
+			color: white;
+		}
+	}	
+	.g-recaptcha {
+		width: 304px;
+		position: relative;
+		float: right;
+		margin-right: 10px;
+	}
+
+	.lang-arrow-up {
+		font-size: 7vh;
+	}
+	.cbo-lang img {
+		width: 7vh;
+	}
+    .cbo-lang-list {
+        background-color: #FFF;
+        position: fixed;
+        bottom: 10vh;
+        right: 10px;
+        border-radius: 5px;
+		box-shadow: 0px 0px 5px #666666;
+
+		img {
+			padding-right: 10px;
+		}
+    }
+	.cbo-lang-selected {
+		align-items: center;
+        display: inline-flex;
+        margin-right: 10px;
+        cursor: pointer;
+	}
+    .cbo-lang-selected img {
+        width: 7vh;
+        padding-right: 5px;
+    }
+	.text-right {
+		padding-right: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;		
+	}
+	.navigation_indicator {
+		background-color: map-get($colors, primary) !important;
+	}
+
+	.portrait {
+		.carousel-indicators {
+			height: 5.5vh;
+		}
+		.carousel-indicators li {
+			width: 2.5vw;
+			height: 2.5vw;
+		}  	
+		.cbo-lang img {
+			width: 5vh;
+		}	
+		ion-icon {
+			font-size: 5vh;
+		}
+		.all-buttons {
+			font-size: $font_size_primary-portrait;
+			height: 5vh;
+		}	
+		.text-copyright {
+			font-size: $font_size_secondary_portrait;
+		}
+	}
+}

@@ -1,0 +1,176 @@
+<!--
+  Created by: thuc@hearme.vn
+  Organization: LabsOfThings.com
+  Project: hearme.vn
+  Date: 16 Oct 2018
+-->
+<ion-header class="{{appInit.screen_orientation}}">
+	<ion-navbar class="logo-header" hideBackButton="true">
+		<ion-title class="title-banner" *ngIf="appInit?.configs?.DEVICE_HEADER_IMG?.value">
+			<img src="{{appConf?.img_server + appInit.configs.DEVICE_HEADER_IMG.value}}"/>		
+		</ion-title>
+		<ion-title class="title-logo"  *ngIf="!appInit?.configs?.DEVICE_HEADER_IMG?.value">
+			<img *ngIf="organization?.logo" class="img-logo" src="{{organization?.logo}}"/>
+			<span *ngIf="!organization?.logo" > {{organization?.name}} </span>
+		</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding *ngIf="appInit.screen_orientation != 'portrait'">
+	<div class="wrapper">
+    <ion-row>  
+        <ion-col class="question">		
+            <em *ngIf="appInit.customer && appInit.customer.name"> 
+				{{ 'WELCOME_dear' | translate}} 
+				{{ appInit.customer.name }}!
+			</em>
+            <em *ngIf="!appInit.customer || !appInit.customer.name"> 
+				{{ 'WELCOME_dear' | translate}} 
+				{{ 'WELCOME_customer' | translate}}!
+			</em>
+			
+        </ion-col>
+    </ion-row>
+    <ion-row class="explaination">
+        <ion-col col-1></ion-col>
+        <ion-col col-10 *ngIf="!welcome_Words">
+            <p *ngIf="invitation && invitation.status!=0"> 
+				{{ 'WELCOME_invitation_expired' | translate}} 
+			</p>
+            <p *ngIf="invitation && invitation.status==0"> 
+				{{ 'THANKGIVING_explaination' | translate}} 
+			</p>
+            <p *ngIf="!invitation"> 
+				{{ 'MESSAGE_Welcome' | translate}} 
+			</p>
+        </ion-col>
+		
+        <ion-col col-10 *ngIf="welcome_Words">
+            <p [innerHTML]="welcome_Words.content"></p>
+            <p class="author">___{{ welcome_Words.author }}___</p>
+        </ion-col>
+		
+        <ion-col col-1></ion-col>
+    </ion-row>
+	</div>
+</ion-content>
+
+<!-- For Welcome page-->	
+<div class="footer footer-md " *ngIf="appInit.screen_orientation != 'portrait'">
+	<ion-row>
+		<ion-col col-3 class="text-copyright text-left" align-self-end>
+			<div *ngIf="!urlParams.get('no_tm')" ><span>© www.hearme.vn</span></div>
+		</ion-col>
+		<ion-col col-6 class="text-copyright">
+			<button col-9 class="slide-default slide-active" z-index=1000 
+				*ngIf="invitation && invitation.status!=0" (click)="appInit.finishSurvey()">
+				<span>{{ 'WELCOME_finish' | translate }}</span>
+			</button>
+			<button col-9 class="slide-default slide-active" z-index=1000
+				*ngIf="!invitation || invitation?.status==0" (click)="startSendFeedback()">
+				<span>{{ 'TAB_FEEDBACK' | translate }}</span>
+			</button>
+		</ion-col>
+		
+		<ion-col col-3 class="text-right cbo-lang" style="margin:auto;" align-self-end>
+            <div class="cbo-lang-list" *ngIf="show_language_Listbox && appInit.languages.datas.length > 1">
+                <ul>
+                    <li *ngFor="let item of appInit.languages.datas" (click)="changeLanguage(item)">
+						<img src="{{ item.flag }}"> 
+						<span>{{ item.name }}</span>
+                    </li>
+                </ul>
+            </div>
+            <div (click)="showHideLang()" class="cbo-lang-selected">
+                <ion-icon class="lang-selected-img" name="hearme-lang" [ngStyle]="{'background': 'url(' + appInit.languages.selected.flag +')'}"></ion-icon>
+                <ion-icon *ngIf="appInit.languages.datas.length > 1" class="lang-selected-arrow" name="arrow-dropup"></ion-icon>
+            </div>
+        </ion-col>
+    </ion-row>
+</div>
+
+<ion-content padding class="portrait welcome-content row" *ngIf="appInit.screen_orientation == 'portrait'">
+	<div class="wrapper">
+    <ion-row>  
+        <ion-col class="question">		
+            <em *ngIf="customer && customer.name"> 
+				{{ 'WELCOME_dear' | translate}} 
+				{{ customer.name }}!
+			</em>
+            <em *ngIf="!customer || !customer.name"> 
+				{{ 'WELCOME_dear' | translate}} 
+				{{ 'WELCOME_customer' | translate}}!
+			</em>
+			
+        </ion-col>
+    </ion-row>
+    <ion-row class="explaination">
+        <ion-col col-12 *ngIf="!welcome_Words">
+            <p *ngIf="invitation && invitation.status!=0"> 
+				{{ 'WELCOME_invitation_expired' | translate}} 
+			</p>
+            <p *ngIf="invitation && invitation.status==0"> 
+				{{ 'THANKGIVING_explaination' | translate}} 
+			</p>
+            <p *ngIf="!invitation"> 
+				{{ 'MESSAGE_Welcome' | translate}} 
+			</p>
+        </ion-col>
+		
+        <ion-col col-12 *ngIf="welcome_Words">
+            <p [innerHTML]="welcome_Words.content"></p>
+            <p class="author">___{{ welcome_Words.author }}___</p>
+        </ion-col>
+    </ion-row>
+	<ion-row>
+		<ion-col col-2></ion-col>
+		<ion-col col-8>
+			<button col-12 class="slide-default slide-active" z-index=1000 
+				*ngIf="invitation && invitation.status!=0" (click)="appInit.finishSurvey()">
+				<span>{{ 'WELCOME_finish' | translate }}</span>
+			</button>
+			<!-- <button col-9 class="slide-default slide-active" z-index=1000 onclick="configureScreen();" -->
+			<button col-12 class="slide-default slide-active" z-index=1000
+				*ngIf="!invitation || invitation?.status==0" (click)="startSendFeedback()">
+				<span>{{ 'TAB_FEEDBACK' | translate }}</span>
+			</button>
+		</ion-col>
+		<ion-col col-2></ion-col>
+	</ion-row>
+	</div>
+</ion-content>
+
+<!-- For Welcome page-->	
+<div class="footer footer-md portrait" *ngIf="appInit.screen_orientation == 'portrait'">
+	<ion-row>
+		<ion-col col-6 class="text-copyright text-left" align-self-end>
+			<div *ngIf="!urlParams.get('no_tm')"><span>© www.hearme.vn</span></div>
+		</ion-col>
+		
+		<ion-col col-6 class="text-right cbo-lang" align-self-end>
+<!--         
+            <div class="cbo-lang-list" *ngIf="appInit.languages.isShow && appInit.languages.datas.length > 1">
+                <ul>
+                    <li *ngFor="let item of appInit.languages.datas" (click)="changeLanguage(item)">
+						<img src="{{ item.flag }}"> 
+						<span>{{ item.name }}</span>
+                    </li>
+                </ul>
+            </div>
+ -->            
+            <div class="cbo-lang-list" *ngIf="show_language_Listbox && appInit.languages.datas.length > 1">
+                <ul>
+                    <li *ngFor="let item of appInit.languages.datas" (click)="changeLanguage(item)">
+						<img src="{{ item.flag }}"> 
+						<span>{{ item.name }}</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div (click)="showHideLang()" class="cbo-lang-selected">
+                <ion-icon class="lang-selected-img" name="hearme-lang" [ngStyle]="{'background': 'url(' + appInit.languages.selected.flag +')'}"></ion-icon>
+                <ion-icon *ngIf="appInit.languages.datas.length > 1" class="lang-selected-arrow" name="arrow-dropup"></ion-icon>
+            </div>
+		</ion-col>
+	</ion-row>
+</div>

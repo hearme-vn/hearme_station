@@ -1,0 +1,15 @@
+page-support-survey {
+    .question {
+        font-size: $font_size_index_question;
+        margin: 15px 0 15px 0;
+    }
+    .scroll-content {
+        margin: 0px !important;
+    }
+    /*Mobile*/
+    @media (max-width: 570px) {
+        .question {
+            font-size: $font_size_index_question_portrait;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+<!--
+  Created by: VXThuc@yahoo.com
+  Organization: LabsOfThings.com
+  Project: hearme.vn   
+  Date: Jul 1, 2020
+-->
+<ion-header *ngIf="!theme || theme.css_class!='ecommerce'"
+    [service]=appInit [survey]=survey [controller]=this> 
+</ion-header>
+
+<!-- FOR NORMAL THEME, NOT PUBLIC THEME -->
+<ion-content padding *ngIf="!theme || theme.css_class!='public' || !device?.target?.face">
+    <ion-row>
+        <ion-col col-12 [ngClass]="appInit.screen_orientation">
+            <ng-container *ngTemplateOutlet="tpl_survey_content"></ng-container>
+        </ion-col>
+    </ion-row>
+</ion-content>
+
+<!-- FOR NORMAL PUBLIC THEME WITH TARGET FEEDBACK FACE -->
+<ion-content padding *ngIf="theme && theme.css_class=='public' && device?.target?.face">
+    <ion-row>
+        <ion-col col-sm-2 class="hidden-xs">
+            <div class="feedbackObject">
+                <img src="{{appConf.img_server + device.target.face}}">
+                <div>
+                    <span>{{device.target.name}}</span><br>
+                    <span><i>{{device.target.division}}</i></span>
+                </div>
+            </div>
+        </ion-col>
+        <ion-col col-sm-10 [ngClass]="appInit.screen_orientation">
+            <ng-container *ngTemplateOutlet="tpl_survey_content"></ng-container>
+        </ion-col>
+    </ion-row>
+</ion-content>
+
+<ion-footer
+    [survey]=survey
+    [controller]=this>
+</ion-footer>
+
+<ng-template #tpl_survey_content>
+    <csat *ngIf="survey?.data?.type==0"
+        [appInit]=appInit [survey]=survey
+        (clicked)="indexRatingClicked($event)"
+        >
+    </csat>
+    <nps *ngIf="survey?.data?.type==1"
+        [appInit]=appInit [survey]=survey
+        (clicked)="indexRatingClicked($event)"
+        >
+    </nps>
+    <ces *ngIf="survey?.data?.type==2"
+        [appInit]=appInit [survey]=survey
+        (clicked)="indexRatingClicked($event)"
+        >
+    </ces>
+    <flx *ngIf="survey?.data?.type==10"
+        [appInit]=appInit [survey]=survey
+        (clicked)="indexRatingClicked($event)"
+        >
+    </flx>
+    <info *ngIf="survey?.data?.type==13"
+         [appInit]=appInit [survey]=survey [question]=survey.question
+         (clicked)="indexRatingClicked($event)"
+        >
+    </info>
+</ng-template>

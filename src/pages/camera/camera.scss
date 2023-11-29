@@ -1,0 +1,44 @@
+page-camera {
+    background-color: white;
+
+    .all-buttons {
+        font-size: $font_size_primary;
+        margin: 1vh 1vw;
+        padding: 3vh 1vw;
+        height: 7.5vh;
+    }
+
+    .camera {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -54%);
+        max-width: 100%;
+        max-height: 92%;
+        width: auto;
+        height: auto;
+        zoom: 2;
+    }
+
+	.portrait {
+        .all-buttons {
+            font-size: $font_size_primary_portrait;
+            margin: 1vh 1vw;
+            padding: 1vh 3vw;
+            height: 5vh;
+        }
+
+    }
+
+    .footer {
+        z-index: 1000;
+        background-color: white;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+
+        ion-row {
+            display: flex;
+        }
+    }
+}

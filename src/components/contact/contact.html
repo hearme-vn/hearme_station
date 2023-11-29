@@ -1,0 +1,59 @@
+<!-- Template for the CONTATC survey component -->
+
+<!-- FOR QUESTION DISPLAYED IN FORM-BASED SURVEY -->
+<ion-row *ngIf="in_form">
+    <ion-col class="question">
+        <div [innerHTML]="survey?.question"></div>
+    </ion-col>
+</ion-row>
+
+<ion-row *ngIf="feedback">
+    <ion-col *ngFor="let cfg of configures; let i=index" id="contact_form"
+        col-12 [attr.col-sm-6]="!cfg.allLine" [attr.col-sm-12]="cfg.allLine">
+        <ion-item class="oveley-white-08" [ngClass]="{'required': cfg.value>=2}" *ngIf="cfg.cfg_key=='CONTACT_NAME'">
+            <ion-label floating>{{ 'CONTACT_name' | translate}}</ion-label>
+            <ion-input enterkeyhint="done" tappable name="name" class="comment" [(ngModel)]="feedback.name" (ionChange)=updateDataChange()></ion-input>
+        </ion-item>
+        <ion-item class="oveley-white-08" [ngClass]="{'required': cfg.value>=2}" *ngIf="cfg.cfg_key=='CONTACT_PHONE'">
+            <ion-label floating>{{ 'CONTACT_phone' | translate}}</ion-label>
+            <ion-input enterkeyhint="done" tappable type="tel" name="phone" class="comment" [(ngModel)]="feedback.phone" (ionChange)=updateDataChange()></ion-input>
+        </ion-item>
+        <ion-item class="oveley-white-08" [ngClass]="{'required': cfg.value>=2}" *ngIf="cfg.cfg_key=='CONTACT_EMAIL'">
+            <ion-label floating>{{ 'CONTACT_email' | translate}}</ion-label>
+            <ion-input enterkeyhint="done" tappable type="email" name="email" class="comment" [(ngModel)]="feedback.email" (ionChange)=updateDataChange()></ion-input>
+        </ion-item>
+        <ion-item class="oveley-white-08" [ngClass]="{'required': cfg.value>=2}" *ngIf="cfg.cfg_key=='CONTACT_ADDRESS'">
+            <ion-label floating>{{ 'CONTACT_address' | translate}}</ion-label>
+            <ion-input enterkeyhint="done" tappable name="address" class="comment" [(ngModel)]="feedback.address" (ionChange)=updateDataChange()></ion-input>
+        </ion-item>
+        <ion-item class="oveley-white-08" [ngClass]="{'required': cfg.value>=2}" *ngIf="cfg.cfg_key=='CONTACT_ROOMNUMBER'">
+            <ion-label floating>{{ 'CONTACT_roomnumber' | translate}}</ion-label>
+            <ion-input enterkeyhint="done" tappable name="roomnumber" class="comment" [(ngModel)]="feedback.roomnumber" (ionChange)=updateDataChange()></ion-input>
+        </ion-item>
+    </ion-col>
+</ion-row>
+
+<!-- 
+<ng-template [ngIf]="!in_form">
+    <ion-item [ngClass]="{'required': survey?.data?.required}">
+        <ion-label floating>{{'COMMENT_comment' | translate}}</ion-label>
+        <ion-textarea tappable autofocus name="comment" [(ngModel)]="feedback.comment"
+            (ionChange)=updateDataChange()>
+        </ion-textarea>
+    </ion-item>
+    <ion-item *ngIf="INCLUDE_CONTACT_FIELDS" [ngClass]="{'required': REQUIRED_CONTACT_FIELDS}">
+        <ion-label floating>{{ 'COMMENT_name' | translate}}</ion-label>
+        <ion-input tappable name="name" [(ngModel)]="feedback.name" (ionChange)=updateDataChange()></ion-input>
+    </ion-item>
+    <ion-item *ngIf="INCLUDE_CONTACT_FIELDS" [ngClass]="{'required': REQUIRED_CONTACT_FIELDS}">
+        <ion-label floating>{{ 'COMMENT_contact' | translate}}</ion-label>
+        <ion-input tappable type="tel" name="contact" [(ngModel)]="feedback.contact" (ionChange)=updateDataChange()>
+        </ion-input>
+    </ion-item>
+
+</ng-template>
+
+<ng-template [ngIf]="in_form">
+    <ion-label class="question" [innerHTML]="survey?.question" [ngClass]="{'required': survey?.data?.required}"></ion-label>
+    <ion-textarea tappable class="form_text" type="text" [(ngModel)]="feedback.comment" (ionChange)=updateDataChange() size="1"></ion-textarea>
+</ng-template> -->

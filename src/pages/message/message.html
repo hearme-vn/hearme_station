@@ -1,0 +1,27 @@
+<div class="{{appInit.screen_orientation}}">
+    <ion-navbar hideBackButton="true">
+        <ion-title class="title-logo" >
+            {{ 'THANKGIVING_thank' | translate }} {{ customer?.name }}
+        </ion-title>
+    </ion-navbar>
+</div>
+
+<ion-content padding class="{{appInit.screen_orientation}}">
+    <ion-row> 
+        <ion-col></ion-col>
+        <ion-col col-10>
+            <img class="thank-face" src="assets/imgs/thanks.png" />
+
+            <p class="thanks text-center" *ngIf="!proverb"> {{ 'MESSAGE_Welcome' | translate}} </p>
+            <p class="thanks author" *ngIf="!proverb">___{{ 'hearme_team' | translate}}___</p>
+
+            <p class="thanks" *ngIf="proverb" [innerHTML]="proverb?.content"></p>
+            <p class="thanks author" *ngIf="proverb">___{{ proverb?.author }}___</p>
+
+            <button class="sendFeedback" ion-button (click)="closeModal()">
+				{{ 'MESSAGE_Start_Feedback' | translate }}
+			</button>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+</ion-content>
