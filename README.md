@@ -1,13 +1,23 @@
-# Description
-- This is an open source hybrid mobile application for collecting customer feedbacks.
-- It uses service from hearme platform.
-- You must register account in website: https://hearme.vn. And then configure account as steps guided in onboarding page 
-- With hearme station, you can modify feedback screen as you want to satisfy you brand or intercept feedback event: before and after sending feedback. Every feedback logic is processed, and you can configure questionaire in administration application.
-- You can adminis your feedback through web application at: https://hearme.vn/zeus or just install mobile app: hearme CXM (in both iOS and Android OS)
 
-This project use Ionic 2 framework
+# hearme station
+```
+[![hearme station](docs/images/feedback_kiosk.png)](http://hearme.vn)
+```
 
-# Demonstration:
+## Description
+The **hearme station** module is an open-source repository that allows clients to modify the UI and application logic as per their needs. With this module, users can create feedback kiosks that are tailored to their specific requirements. The module is part of the **hearme** CXM platform, which provides a full suite of tools for collecting and analyzing customer feedback.
+
+- **hearme station** is an open-source hybrid mobile application that allows you to collect customer feedback. It uses services from the **hearme** platform, which provides a full suite of tools for collecting and analyzing customer feedback.
+
+- To get started with **hearme station**, you need to register an account on the **hearme** website at hearme.vn. Once you have registered, you can configure your account as per the steps guided in the onboarding page.
+
+- With **hearme station**, you can modify the feedback screen to suit your brand or intercept feedback events before and after sending feedback. Every feedback logic is processed, and you can configure questionnaires in the administration application.
+
+- You can manage your feedback through the **hearme** web application at hearme.vn/zeus or by installing the **hearme CXM** mobile app on your iOS or Android device.
+
+- This project use Ionic 2 framework
+
+## Demonstration:
 - Kiosk feedback channel: https://www.youtube.com/watch?v=e7KJPQUzvDc
 - You can configure questions, image, and trademark as you want: https://www.youtube.com/watch?v=uzsVHHXlpNY
 
@@ -42,7 +52,7 @@ $ ionic cordova plugin rm cordova-plugin-console  # remove it before generating 
 $ ionic cordova build --release android
 ```
 
-# Current version 3.5.0
+## Current version 3.5.0
 - Adjust notification message for NPS: change max score from 11 to 10 (0-10)
 - Update labels in thank pages
 - Add field severity to feedback
@@ -51,7 +61,7 @@ $ ionic cordova build --release android
 - Setting little bit delay before emiting event
 - Default sound when there is not thank page
 
-# Contact and support
+## Contact and support
 hearme Limited company
 
 Add: Toong office, 3th Floor, No. 8 Trang Thi, Hoan Kiem Dist., Hanoi, Vietnam
