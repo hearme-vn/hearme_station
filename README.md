@@ -1,8 +1,6 @@
 
 # hearme station
-```
 [![hearme station](docs/images/feedback_kiosk.png)](http://hearme.vn)
-```
 
 ## Description
 The **hearme station** module is an open-source repository that allows clients to modify the UI and application logic as per their needs. With this module, users can create feedback kiosks that are tailored to their specific requirements. The module is part of the **hearme** CXM platform, which provides a full suite of tools for collecting and analyzing customer feedback.
